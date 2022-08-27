@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import * as React from "react";
 import {
   Button,
@@ -16,8 +17,11 @@ import {
 export interface SignUpFormProps {}
 
 export function SignUpForm(props: SignUpFormProps) {
+  const router = useRouter();
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    router.push("/@me");
   };
 
   return (

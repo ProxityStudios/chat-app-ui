@@ -1,5 +1,22 @@
 import { styled } from "../../../stitches.config";
 
+export const LayoutView = styled("div", {
+  width: "100%",
+  height: "100%",
+  display: "flex",
+});
+
+export const ContentWithNavbar = styled("div", {
+  flex: 1,
+  width: "100%",
+  height: "100%",
+});
+export const LayoutContentWrapper = styled("main", {
+  width: "100%",
+  height: "calc(100% - 60px)",
+  overflowY: "scroll",
+});
+
 export const Button = styled("button", {
   border: "none",
   outline: "none",
@@ -7,7 +24,7 @@ export const Button = styled("button", {
   fontSize: "1.1rem",
   fontWeight: 600,
   cursor: "pointer",
-  transition: "background 200ms ease-out",
+  transition: "background 200ms ease-out, border 200ms ease ",
   variants: {
     width: {
       full: {
@@ -35,6 +52,9 @@ export const Button = styled("button", {
       accent: {
         background: "$accent500",
         "&:hover": {
+          background: "$accent600",
+        },
+        "&:focus": {
           background: "$accent600",
         },
         "&:active": {
