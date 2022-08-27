@@ -8,23 +8,33 @@ import {
   InputLabel,
 } from "../../utils/styles";
 import {
-  SignInFormFooter,
-  SignInFormHeading,
-  SignInFormInputsContainer,
+  SignUpFormFooter,
+  SignUpFormHeading,
+  SignUpFormInputsContainer,
 } from "../../utils/styles/auth";
 
-export interface SignInFormProps {}
+export interface SignUpFormProps {}
 
-export function SignInForm(props: SignInFormProps) {
+export function SignUpForm(props: SignUpFormProps) {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
   return (
     <form onSubmit={onSubmit}>
-      <SignInFormHeading>Sign in to continue</SignInFormHeading>
+      <SignUpFormHeading>Sign up to continue</SignUpFormHeading>
+      <SignUpFormInputsContainer>
+        <InputContainer>
+          <InputLabel htmlFor="username-input">Username</InputLabel>
+          <InputField
+            type="text"
+            id="username-input"
+            name="username"
+            placeholder="TichoIsCool"
+            required
+          />
+        </InputContainer>
 
-      <SignInFormInputsContainer>
         <InputContainer>
           <InputLabel htmlFor="email-input">Email</InputLabel>
           <InputField
@@ -47,7 +57,7 @@ export function SignInForm(props: SignInFormProps) {
             maxLength={18}
           />
         </InputContainer>
-      </SignInFormInputsContainer>
+      </SignUpFormInputsContainer>
 
       <Button
         css={{
@@ -56,17 +66,17 @@ export function SignInForm(props: SignInFormProps) {
         width="full"
         type="submit"
       >
-        Sign in
+        Sign up
       </Button>
 
       <Divider view="shortened" />
 
-      <SignInFormFooter>
-        Don&apos;t have an account?
-        <Link href="/auth/sign-up">Sign up</Link>
-      </SignInFormFooter>
+      <SignUpFormFooter>
+        Already have an account?
+        <Link href="/auth/sign-in">Sign in</Link>
+      </SignUpFormFooter>
     </form>
   );
 }
 
-export default SignInForm;
+export default SignUpForm;

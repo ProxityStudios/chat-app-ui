@@ -49,6 +49,36 @@ export const Button = styled("button", {
   },
 });
 
+export const Divider = styled("hr", {
+  appearance: "none",
+  border: "none",
+  display: "block",
+  background: "$background",
+  height: "1px",
+  variants: {
+    spacing: {
+      small: {
+        marginTop: "25px",
+        marginBottom: "25px",
+      },
+      medium: {
+        marginTop: "30px",
+        marginBottom: "30px",
+      },
+    },
+    view: {
+      shortened: {
+        width: "80%",
+        marginLeft: "auto",
+        marginRight: "auto",
+      },
+    },
+  },
+  defaultVariants: {
+    spacing: "medium",
+  },
+});
+
 export const InputContainer = styled("div", {
   color: "$accent500",
 });
@@ -75,6 +105,9 @@ export const InputField = styled("input", {
   },
   "&:focus": {
     background: "$inputFocusBackground",
+    border: "1px $accent500 solid",
+  },
+  "&:hover": {
     border: "1px $accent500 solid",
   },
 });
