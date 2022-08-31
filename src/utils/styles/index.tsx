@@ -1,5 +1,15 @@
 import { styled } from "../../../stitches.config";
 
+export const Link = styled("a", {
+  appearance: "none",
+  color: "$accent500",
+  textDecoration: "underline",
+  padding: "0 6px",
+  "&:hover": {
+    color: "$accent300",
+  },
+});
+
 export const Button = styled("button", {
   border: "none",
   outline: "none",

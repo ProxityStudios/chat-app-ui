@@ -32,10 +32,7 @@ export const SignInFormFooter = styled("span", {
   fontSize: "14px",
   display: "block",
   textAlign: "center",
-  color: "#accent200",
-  "> a": {
-    marginLeft: "10px",
-  },
+  color: "white",
 });
 
 // Sign up
@@ -71,8 +68,5 @@ export const SignUpFormFooter = styled("span", {
   fontSize: "14px",
   display: "block",
   textAlign: "center",
-  color: "#accent200",
-  "> a": {
-    marginLeft: "10px",
-  },
+  color: "white",
 });

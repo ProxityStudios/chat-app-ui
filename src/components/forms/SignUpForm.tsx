@@ -1,4 +1,4 @@
-import Link from "next/link";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
 import {
@@ -7,6 +7,7 @@ import {
   InputContainer,
   InputField,
   InputLabel,
+  Link,
 } from "../../utils/styles";
 import {
   SignUpFormFooter,
@@ -21,7 +22,7 @@ export function SignUpForm(props: SignUpFormProps) {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push("/@me");
+    router.push("/servers/1");
   };
 
   return (
@@ -77,7 +78,9 @@ export function SignUpForm(props: SignUpFormProps) {
 
       <SignUpFormFooter>
         Already have an account?
-        <Link href="/auth/sign-in">Sign in</Link>
+        <NextLink href="/auth/sign-in" passHref>
+          <Link>Sign in</Link>
+        </NextLink>
       </SignUpFormFooter>
     </form>
   );

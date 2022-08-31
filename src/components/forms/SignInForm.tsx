@@ -1,4 +1,4 @@
-import Link from "next/link";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
 import { useAuth } from "../../contexts/AuthContext";
@@ -8,6 +8,7 @@ import {
   InputContainer,
   InputField,
   InputLabel,
+  Link,
 } from "../../utils/styles";
 import {
   SignInFormFooter,
@@ -74,7 +75,9 @@ export function SignInForm(props: SignInFormProps) {
 
       <SignInFormFooter>
         Don&apos;t have an account?
-        <Link href="/auth/sign-up">Sign up</Link>
+        <NextLink href="/auth/sign-up" passHref>
+          <Link>Sign up</Link>
+        </NextLink>
       </SignInFormFooter>
     </form>
   );
