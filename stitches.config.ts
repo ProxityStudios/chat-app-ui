@@ -80,5 +80,6 @@ export const globalStyles = globalCss({
     width: "100%",
     isolation: "isolate",
     zIndex: 0,
+    userSelect: "none",
   },
 });
