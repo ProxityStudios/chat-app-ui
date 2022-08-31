@@ -13,7 +13,7 @@ export const Link = styled("a", {
 export const Button = styled("button", {
   border: "none",
   outline: "none",
-  borderRadius: "$large",
+  borderRadius: "$base",
   cursor: "pointer",
   transition: "background 200ms ease-out, border 200ms ease ",
   padding: "0 20px",
