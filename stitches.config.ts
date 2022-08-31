@@ -15,12 +15,15 @@ export const {
     radii: {
       base: ".25rem",
       large: ".6rem",
+      xlarge: ".8rem",
     },
     colors: {
-      background: "hsl(230, 41%, 12%)",
-      backgroundSecondary: "hsl(244, 41%, 8%)",
-
+      borderColor: "hsl(230, 41%, 19%)",
       dividerColor: "hsl(230, 41%, 19%)",
+
+      background: "hsl(230, 41%, 14%)",
+      backgroundSecondary: "hsl(244, 41%, 8%)",
+      backgroundSecondaryRgb: "13, 12, 29",
 
       inputBackground: "hsl(230, 41%, 11%)",
       inputFocusBackground: "hsl(230, 41%, 15%)",
@@ -75,5 +78,7 @@ export const globalStyles = globalCss({
     background: "$background",
     height: "100%",
     width: "100%",
+    isolation: "isolate",
+    zIndex: 0,
   },
 });

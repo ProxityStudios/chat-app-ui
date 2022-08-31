@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
+import { useAuth } from "../../contexts/AuthContext";
 import {
   Button,
   Divider,
@@ -18,10 +19,16 @@ export interface SignInFormProps {}
 
 export function SignInForm(props: SignInFormProps) {
   const router = useRouter();
+  const { login } = useAuth();
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    router.push("/@me");
+    console.log("Inside sign in form submit function");
+    console.log(e.currentTarget.email.value);
+    console.log(e.currentTarget.password.value);
+
+    login(e.currentTarget.email.value, e.currentTarget.password.value);
+    router.push("/servers/1");
   };
 
   return (

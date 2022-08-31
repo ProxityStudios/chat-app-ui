@@ -1,6 +1,6 @@
 import { styled } from "../../../../stitches.config";
 
-export const SignInView = styled("div", {
+export const SignInStyle = styled("div", {
   width: "100%",
   height: "100%",
   display: "flex",
@@ -39,7 +39,7 @@ export const SignInFormFooter = styled("span", {
 });
 
 // Sign up
-export const SignUpView = styled("div", {
+export const SignUpStyle = styled("div", {
   width: "100%",
   height: "100%",
   display: "flex",

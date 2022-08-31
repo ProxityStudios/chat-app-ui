@@ -46,3 +46,5 @@ export function AuthProvider(props: AuthProviderProps) {
     <AuthContext.Provider value={value}>{props.children}</AuthContext.Provider>
   );
 }
+
+export const useAuth = () => React.useContext(AuthContext);

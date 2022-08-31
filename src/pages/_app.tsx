@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
 import { globalStyles } from "../../stitches.config";
+import { AuthProvider } from "../contexts/AuthContext";
 import { NextPageWithLayout } from "../utils/types";
 
 interface AppPropsWithLayout extends AppProps {
@@ -9,7 +10,8 @@ interface AppPropsWithLayout extends AppProps {
 function ChatApp({ Component, pageProps }: AppPropsWithLayout) {
   globalStyles();
   const getLayout = Component.getLayout ?? ((page) => page);
-  return getLayout(<Component {...pageProps} />);
+
+  return <AuthProvider>{getLayout(<Component {...pageProps} />)}</AuthProvider>;
 }
 
 export default ChatApp;

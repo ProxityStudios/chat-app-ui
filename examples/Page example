@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import ServerViewLayout from "../components/server/ServerViewLayout";
 import { NextPageWithLayout } from "../utils/types";
 
 const Page: NextPageWithLayout = () => {
@@ -6,7 +6,7 @@ const Page: NextPageWithLayout = () => {
 };
 
 Page.getLayout = (page) => {
-  return <Layout>{page}</Layout>;
+  return <ServerViewLayout>{page}</ServerViewLayout>;
 };
 
 export default Page;
