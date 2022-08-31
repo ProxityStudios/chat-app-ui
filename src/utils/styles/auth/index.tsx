@@ -12,8 +12,12 @@ export const SignInStyle = styled("div", {
 export const SignInContainer = styled("div", {
   background: "$backgroundSecondary",
   borderRadius: "$large",
-  minHeight: "300px",
-  minWidth: "450px",
+  width: "100%",
+  height: "100%",
+  "@md": {
+    width: "450px",
+    height: "auto",
+  },
   padding: "2rem",
 });
 
@@ -48,8 +52,12 @@ export const SignUpStyle = styled("div", {
 export const SignUpContainer = styled("div", {
   background: "$backgroundSecondary",
   borderRadius: "$large",
-  minHeight: "300px",
-  minWidth: "450px",
+  width: "100%",
+  height: "100%",
+  "@md": {
+    width: "450px",
+    height: "auto",
+  },
   padding: "2rem",
 });
 

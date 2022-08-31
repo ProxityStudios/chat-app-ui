@@ -59,7 +59,11 @@ export const {
       red900: "hsl(352, 93%, 27%)",
     },
   },
-  media: {},
+  media: {
+    sm: "(min-width: 640px)",
+    md: "(min-width: 768px)",
+    lg: "(min-width: 1024px)",
+  },
   utils: {},
 });
 

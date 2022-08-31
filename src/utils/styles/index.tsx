@@ -15,7 +15,7 @@ export const Button = styled("button", {
   outline: "none",
   borderRadius: "$base",
   cursor: "pointer",
-  transition: "background 200ms ease-out, border 200ms ease ",
+  transition: "background 200ms ease-out, border 200ms ease",
   padding: "0 20px",
   fontWeight: 500,
   variants: {
