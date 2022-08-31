@@ -22,7 +22,7 @@ export const Button = styled("button", {
   outline: "none",
   borderRadius: "$base",
   fontSize: "1.1rem",
-  fontWeight: 600,
+  fontWeight: 500,
   cursor: "pointer",
   transition: "background 200ms ease-out, border 200ms ease ",
   variants: {
@@ -73,7 +73,7 @@ export const Divider = styled("hr", {
   appearance: "none",
   border: "none",
   display: "block",
-  background: "$background",
+  background: "$dividerColor",
   height: "1px",
   variants: {
     spacing: {
@@ -104,11 +104,12 @@ export const InputContainer = styled("div", {
 });
 
 export const InputLabel = styled("label", {
+  textTransform: "uppercase",
   display: "block",
   color: "inherit",
-  marginBottom: "10px",
-  fontSize: ".8rem",
-  fontWeight: 500,
+  marginBottom: "12px",
+  fontSize: ".7rem",
+  fontWeight: 700,
 });
 
 export const InputField = styled("input", {

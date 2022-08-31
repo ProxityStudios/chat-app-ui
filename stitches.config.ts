@@ -20,7 +20,9 @@ export const {
       background: "hsl(230, 41%, 12%)",
       backgroundSecondary: "hsl(244, 41%, 8%)",
 
-      inputBackground: "hsl(230, 41%, 12%)",
+      dividerColor: "hsl(230, 41%, 19%)",
+
+      inputBackground: "hsl(230, 41%, 11%)",
       inputFocusBackground: "hsl(230, 41%, 15%)",
 
       accent100: "hsl(198, 66%, 92%)",
