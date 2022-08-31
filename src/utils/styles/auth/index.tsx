@@ -11,12 +11,11 @@ export const SignInStyle = styled("div", {
 
 export const SignInContainer = styled("div", {
   background: "$backgroundSecondary",
-  borderRadius: "$large",
-  width: "100%",
-  height: "100%",
+  minWidth: "100%",
+  minHeight: "max-content",
   "@md": {
-    width: "450px",
-    height: "auto",
+    minWidth: "450px",
+    borderRadius: "$large",
   },
   padding: "2rem",
 });
@@ -51,12 +50,11 @@ export const SignUpStyle = styled("div", {
 
 export const SignUpContainer = styled("div", {
   background: "$backgroundSecondary",
-  borderRadius: "$large",
-  width: "100%",
-  height: "100%",
+  minWidth: "100%",
+  minHeight: "max-content",
   "@md": {
-    width: "450px",
-    height: "auto",
+    minWidth: "450px",
+    borderRadius: "$large",
   },
   padding: "2rem",
 });
