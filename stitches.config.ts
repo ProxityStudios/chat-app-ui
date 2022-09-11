@@ -13,7 +13,7 @@ export const {
   prefix: "chat-app",
   theme: {
     sizes: {
-      conversationTopBase: "110px",
+      conversationTopBase: "120px",
     },
     space: {
       horizontalBase: "20px",
@@ -29,7 +29,7 @@ export const {
       dividerColor: "hsl(230, 41%, 19%)",
 
       background: "hsl(234, 18%, 11%)",
-      backgroundSecondary: "hsl(234, 15%, 16%)",
+      backgroundSecondary: "hsl(234, 15%, 14%)",
       backgroundSecondaryRgb: "28, 29, 38",
 
       inputBackground: "hsl(230, 41%, 11%)",

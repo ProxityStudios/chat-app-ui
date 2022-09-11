@@ -1,17 +1,25 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { BsPlusCircleDotted } from "react-icons/bs";
+import { messagesInfoBar } from "../../../__mocks__";
 import { IconButton } from "../../utils/styles";
 import {
   Avatar,
   AvatarContainer,
   ConversationMessagesBarStyle,
+  MessageInfo,
+  MessageInfoContent,
+  MessageInfoHeading,
+  MessageInfoView,
+  MessagesInfo,
   StarusBar,
-} from "../../utils/styles/conversation/ConversationMessagesBar";
+} from "../../utils/styles/conversation/ConversationMessagesInfoBar";
 
-export interface ConversationMessagesBarProps {}
+export interface ConversationMessagesBarInfoProps {}
 
-export function ConversationMessagesBar(props: ConversationMessagesBarProps) {
+export function ConversationMessagesInfoBar(
+  props: ConversationMessagesBarInfoProps
+) {
   const router = useRouter();
   return (
     <ConversationMessagesBarStyle>
@@ -56,8 +64,34 @@ export function ConversationMessagesBar(props: ConversationMessagesBarProps) {
           </AvatarContainer>
         </Link>
       </StarusBar>
+
+      <MessagesInfo>
+        {messagesInfoBar.map((messageInfo) => (
+          <Link
+            key={messageInfo.id}
+            href={`/conversations/${messageInfo.id}`}
+            passHref
+          >
+            <MessageInfo>
+              <AvatarContainer>
+                <Avatar
+                  height={60}
+                  width={60}
+                  src="https://github.com/profile.png"
+                />
+              </AvatarContainer>
+              <MessageInfoView>
+                <MessageInfoHeading>
+                  {messageInfo.author.name}
+                </MessageInfoHeading>
+                <MessageInfoContent>{messageInfo.content}</MessageInfoContent>
+              </MessageInfoView>
+            </MessageInfo>
+          </Link>
+        ))}
+      </MessagesInfo>
     </ConversationMessagesBarStyle>
   );
 }
 
-export default ConversationMessagesBar;
+export default ConversationMessagesInfoBar;

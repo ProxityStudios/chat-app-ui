@@ -5,6 +5,8 @@ export const ConversationMessagesBarStyle = styled("aside", {
   width: 330,
   flexShrink: 0,
   background: "$backgroundSecondary",
+  borderRight: "1px $borderColor solid",
+  overflow: "auto",
 });
 
 export const StarusBar = styled("div", {
@@ -32,3 +34,29 @@ export const AvatarContainer = styled("a", {
   flexShrink: 0,
 });
 export const Avatar = styled(Image, {});
+
+export const MessagesInfo = styled("div", {});
+export const MessageInfo = styled("a", {
+  display: "flex",
+  padding: 20,
+  borderTop: "1px $borderColor solid",
+  borderBottom: "1px $borderColor solid",
+  color: "unset",
+  textDecoration: "none",
+  transition: "background 150ms ease-out",
+  "&:hover": {
+    background: "#4444",
+  },
+});
+export const MessageInfoView = styled("div", {
+  marginLeft: 12,
+});
+export const MessageInfoHeading = styled("h5", {
+  marginTop: 6,
+  fontWeight: 500,
+  fontSize: "1.05rem",
+});
+export const MessageInfoContent = styled("span", {
+  fontSize: "0.7rem",
+  color: "DimGray",
+});

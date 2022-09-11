@@ -5,7 +5,7 @@ import {
   ConversationLayoutStyle,
 } from "../../utils/styles/conversation/ConversationLayout";
 import ConversationHeader from "./Header";
-import ConversationMessagesBar from "./MessagesBar";
+import ConversationMessagesInfoBar from "./MessagesInfoBar";
 import ConversationNavigationBar from "./NavigationBar";
 import ConversationRightBar from "./RightBar";
 
@@ -20,7 +20,7 @@ export function ConversationLayout({ children }: ConversationLayoutProps) {
 
       <ConversationContent>
         <ConversationNavigationBar />
-        <ConversationMessagesBar />
+        <ConversationMessagesInfoBar />
 
         <Conversation>{children}</Conversation>
 

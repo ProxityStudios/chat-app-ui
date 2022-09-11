@@ -70,3 +70,46 @@ export const servers = [
     },
   },
 ];
+
+export const messagesInfoBar = [
+  {
+    id: "1",
+    author: {
+      name: "Namod Mahomaund",
+      avatar_url: "https://github.com/profile.png",
+    },
+    content: "This is so suck!",
+  },
+  {
+    id: "2",
+    author: {
+      name: "Ojaskdja Jkjaskdl",
+      avatar_url: "https://github.com/profile.png",
+    },
+    content: "JXDD sakdjakldjalsk asdjklajdslk :)",
+  },
+  {
+    id: "3",
+    author: {
+      name: "Jlkjkla Jjaksdjka",
+      avatar_url: "https://github.com/profile.png",
+    },
+    content: "JXDD sakdjakldjalsk asdjklajdslk :)",
+  },
+  {
+    id: "4",
+    author: {
+      name: "Hasjdkalsjd Dadskadjal",
+      avatar_url: "https://github.com/profile.png",
+    },
+    content: "JXDD sakdjakldjalsk asdjklajdslk :)",
+  },
+  {
+    id: "5",
+    author: {
+      name: "Hajhsldahjl Hhjasdhak",
+      avatar_url: "https://github.com/profile.png",
+    },
+    content: "JXDD sakdjakldjalsk asdjklajdslk :)",
+  },
+];
