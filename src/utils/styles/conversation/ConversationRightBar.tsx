@@ -1,7 +1,6 @@
 import { styled } from "../../../../stitches.config";
 
 export const ConversationRightBarStyle = styled("aside", {
-  width: 200,
+  width: 260,
   flexShrink: 0,
-  background: "green",
 });

@@ -1,0 +1,12 @@
+import { styled } from "../../../../stitches.config";
+
+export const ConversationHeaderStyle = styled("header", {
+  height: 70,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: "0 $horizontalBase",
+  borderBottom: "1px $borderColor solid",
+});
+
+export const Logo = styled("h3", {});

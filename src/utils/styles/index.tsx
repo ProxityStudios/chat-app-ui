@@ -10,6 +10,21 @@ export const Link = styled("a", {
   },
 });
 
+export const IconButton = styled("button", {
+  appearance: "none",
+  background: "transparent",
+  outline: "none",
+  border: "none",
+  cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: "$accent500",
+  "&:hover": {
+    color: "$accent300",
+  },
+});
+
 export const Button = styled("button", {
   border: "none",
   outline: "none",

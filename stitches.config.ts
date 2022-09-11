@@ -12,18 +12,25 @@ export const {
 } = createStitches({
   prefix: "chat-app",
   theme: {
+    sizes: {
+      conversationTopBase: "110px",
+    },
+    space: {
+      horizontalBase: "20px",
+    },
+
     radii: {
       base: ".25rem",
       large: ".6rem",
       xlarge: ".8rem",
     },
     colors: {
-      borderColor: "hsl(230, 41%, 19%)",
+      borderColor: "hsl(0, 3%, 22%)",
       dividerColor: "hsl(230, 41%, 19%)",
 
       background: "hsl(234, 18%, 11%)",
-      backgroundSecondary: "hsl(244, 41%, 8%)",
-      backgroundSecondaryRgb: "13, 12, 29",
+      backgroundSecondary: "hsl(234, 15%, 16%)",
+      backgroundSecondaryRgb: "28, 29, 38",
 
       inputBackground: "hsl(230, 41%, 11%)",
       inputFocusBackground: "hsl(230, 41%, 15%)",
