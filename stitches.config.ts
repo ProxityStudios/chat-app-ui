@@ -32,8 +32,8 @@ export const {
       backgroundSecondary: "hsl(234, 15%, 14%)",
       backgroundSecondaryRgb: "28, 29, 38",
 
-      inputBackground: "hsl(230, 41%, 11%)",
-      inputFocusBackground: "hsl(230, 41%, 15%)",
+      inputBackground: "hsl(230, 20%, 8%)",
+      inputFocusBackground: "hsl(230, 20%, 16%)",
 
       accent100: "hsl(198, 66%, 92%)",
       accent200: "hsl(198, 66%, 82%)",

@@ -6,6 +6,7 @@ import { IconButton } from "../../utils/styles";
 import {
   Avatar,
   AvatarContainer,
+  AvatarWrapper,
   ConversationMessagesBarStyle,
   MessageInfo,
   MessageInfoContent,
@@ -28,40 +29,59 @@ export function ConversationMessagesInfoBar(
           <BsPlusCircleDotted size={57} />
         </IconButton>
         <Link href={`/conversations/${router.query.conversationId}`} passHref>
-          <AvatarContainer>
-            <Avatar
-              height={60}
-              width={60}
-              src="https://github.com/profile.png"
-            />
-          </AvatarContainer>
+          <AvatarWrapper>
+            <AvatarContainer>
+              <Avatar
+                height={60}
+                width={60}
+                src="https://github.com/profile.png"
+              />
+            </AvatarContainer>
+          </AvatarWrapper>
+        </Link>{" "}
+        <Link href={`/conversations/${router.query.conversationId}`} passHref>
+          <AvatarWrapper>
+            <AvatarContainer>
+              <Avatar
+                height={60}
+                width={60}
+                src="https://github.com/profile.png"
+              />
+            </AvatarContainer>
+          </AvatarWrapper>
+        </Link>{" "}
+        <Link href={`/conversations/${router.query.conversationId}`} passHref>
+          <AvatarWrapper>
+            <AvatarContainer>
+              <Avatar
+                height={60}
+                width={60}
+                src="https://github.com/profile.png"
+              />
+            </AvatarContainer>
+          </AvatarWrapper>
         </Link>
         <Link href={`/conversations/${router.query.conversationId}`} passHref>
-          <AvatarContainer>
-            <Avatar
-              height={60}
-              width={60}
-              src="https://github.com/profile.png"
-            />
-          </AvatarContainer>
+          <AvatarWrapper>
+            <AvatarContainer>
+              <Avatar
+                height={60}
+                width={60}
+                src="https://github.com/profile.png"
+              />
+            </AvatarContainer>
+          </AvatarWrapper>
         </Link>
         <Link href={`/conversations/${router.query.conversationId}`} passHref>
-          <AvatarContainer>
-            <Avatar
-              height={60}
-              width={60}
-              src="https://github.com/profile.png"
-            />
-          </AvatarContainer>
-        </Link>
-        <Link href={`/conversations/${router.query.conversationId}`} passHref>
-          <AvatarContainer>
-            <Avatar
-              height={60}
-              width={60}
-              src="https://github.com/profile.png"
-            />
-          </AvatarContainer>
+          <AvatarWrapper>
+            <AvatarContainer>
+              <Avatar
+                height={60}
+                width={60}
+                src="https://github.com/profile.png"
+              />
+            </AvatarContainer>
+          </AvatarWrapper>
         </Link>
       </StarusBar>
 

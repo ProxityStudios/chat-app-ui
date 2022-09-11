@@ -127,7 +127,7 @@ export const InputField = styled("input", {
   transition: "border 200ms",
   border: "1px $inputBackground solid",
   "&::placeholder": {
-    color: "$accent900",
+    color: "SlateGray",
   },
   "&:focus": {
     background: "$inputFocusBackground",

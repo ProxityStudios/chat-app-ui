@@ -29,7 +29,7 @@ export function SignInForm(props: SignInFormProps) {
     console.log(e.currentTarget.password.value);
 
     login(e.currentTarget.email.value, e.currentTarget.password.value);
-    router.push("/servers/1");
+    router.push("/conversations/1");
   };
 
   return (

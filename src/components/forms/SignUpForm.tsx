@@ -22,7 +22,7 @@ export function SignUpForm(props: SignUpFormProps) {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push("/servers/1");
+    router.push("/conversations/1");
   };
 
   return (

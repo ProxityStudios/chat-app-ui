@@ -24,14 +24,16 @@ export const StarusBar = styled("div", {
   },
 });
 
-export const AvatarContainer = styled("a", {
+export const AvatarWrapper = styled("a", {
+  flexShrink: 0,
+});
+export const AvatarContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   borderRadius: "100%",
   background: "$background",
   overflow: "hidden",
-  flexShrink: 0,
 });
 export const Avatar = styled(Image, {});
 
