@@ -1,14 +1,14 @@
 import { NextPage } from "next";
 import SignUpForm from "../../components/forms/SignUpForm";
-import { SignUpContainer, SignUpStyle } from "../../utils/styles/auth";
+import { AuthPage, AuthPageContainer } from "../../utils/styles/auth";
 
 const SignUp: NextPage = () => {
   return (
-    <SignUpStyle>
-      <SignUpContainer>
+    <AuthPage>
+      <AuthPageContainer>
         <SignUpForm />
-      </SignUpContainer>
-    </SignUpStyle>
+      </AuthPageContainer>
+    </AuthPage>
   );
 };
 

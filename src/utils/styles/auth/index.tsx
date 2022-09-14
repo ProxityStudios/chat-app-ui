@@ -1,6 +1,6 @@
 import { styled } from "../../../../stitches.config";
 
-export const SignInStyle = styled("div", {
+export const AuthPage = styled("div", {
   width: "100%",
   height: "100%",
   display: "flex",
@@ -9,12 +9,17 @@ export const SignInStyle = styled("div", {
   flexWrap: "wrap",
 });
 
-export const SignInContainer = styled("div", {
+export const AuthPageContainer = styled("div", {
+  overflow: "auto",
   background: "$backgroundSecondary",
-  minWidth: "100%",
-  minHeight: "max-content",
-  "@md": {
-    minWidth: "450px",
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  "@sm": {
+    height: "min-content",
+    width: "425px",
     borderRadius: "$large",
   },
   padding: "2rem",
@@ -36,27 +41,6 @@ export const SignInFormFooter = styled("span", {
   display: "block",
   textAlign: "center",
   color: "white",
-});
-
-// Sign up
-export const SignUpStyle = styled("div", {
-  width: "100%",
-  height: "100%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexWrap: "wrap",
-});
-
-export const SignUpContainer = styled("div", {
-  background: "$backgroundSecondary",
-  minWidth: "100%",
-  minHeight: "max-content",
-  "@md": {
-    minWidth: "450px",
-    borderRadius: "$large",
-  },
-  padding: "2rem",
 });
 
 export const SignUpFormHeading = styled("h2", {

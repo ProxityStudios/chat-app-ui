@@ -4,12 +4,7 @@ import { NextPageWithLayout } from "../../../utils/types";
 
 const Conversation: NextPageWithLayout = () => {
   const router = useRouter();
-  return (
-    <div>
-      Conversation {router.query.conversationId}
-      {/* <div style={{ height: 1200 }}>Huge content</div> */}
-    </div>
-  );
+  return <div>Conversation {router.query.conversationId}</div>;
 };
 
 Conversation.getLayout = (page) => {

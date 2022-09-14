@@ -9,11 +9,7 @@ const Home: NextPageWithLayout = () => {
     router.push("/auth/sign-in");
   }, [router]);
 
-  return <></>;
+  return <>redirecting</>;
 };
-
-// Home.getLayout = (page) => {
-//   return <Layout>{page}</Layout>;
-// };
 
 export default Home;
