@@ -123,6 +123,15 @@ export const InputRequired = styled("span", {
   fontSize: "0.8rem",
 });
 
+export const InputInformation = styled("p", {
+  display: "block",
+  color: "SlateGray",
+  fontSize: "0.7rem",
+  fontWeight: 400,
+  marginTop: 10,
+  marginLeft: 2,
+});
+
 export const InputField = styled("input", {
   outline: "none",
   background: "$inputBackground",

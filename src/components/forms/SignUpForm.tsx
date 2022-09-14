@@ -6,6 +6,7 @@ import {
   Divider,
   InputContainer,
   InputField,
+  InputInformation,
   InputLabel,
   InputRequired,
   Link,
@@ -40,6 +41,7 @@ export function SignUpForm(props: SignUpFormProps) {
             placeholder="TichoIsCool"
             required
           />
+          <InputInformation>How others should call you?</InputInformation>
         </InputContainer>
 
         <InputContainer>
@@ -52,6 +54,9 @@ export function SignUpForm(props: SignUpFormProps) {
             placeholder="ticho@proxitystudios.tk"
             required
           />
+          <InputInformation>
+            Others will add you with this email after you sign up.
+          </InputInformation>
         </InputContainer>
         <InputContainer>
           <InputLabel htmlFor="password-input">Password</InputLabel>
@@ -65,12 +70,15 @@ export function SignUpForm(props: SignUpFormProps) {
             minLength={6}
             maxLength={18}
           />
+          <InputInformation>
+            Use strong password if you don&apos;t want to be hacked!
+          </InputInformation>
         </InputContainer>
       </SignUpFormInputsContainer>
 
       <Button
         css={{
-          marginTop: "20px",
+          marginTop: 35,
         }}
         width="full"
         type="submit"
