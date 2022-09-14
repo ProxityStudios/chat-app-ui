@@ -78,7 +78,10 @@ export const messagesInfoBar = [
       name: "Namod Mahomaund",
       avatar_url: "https://github.com/profile.png",
     },
-    content: "This is so suck!",
+    content: "Lorem ipsum dolar sit amet consectetur.",
+    unreaded_messages_count: 6,
+    is_unreaded: true,
+    sent_at: "2:34 PM",
   },
   {
     id: "2",
@@ -86,7 +89,9 @@ export const messagesInfoBar = [
       name: "Ojaskdja Jkjaskdl",
       avatar_url: "https://github.com/profile.png",
     },
-    content: "JXDD sakdjakldjalsk asdjklajdslk :)",
+    content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
+    is_typing: true,
+    sent_at: "yesterday",
   },
   {
     id: "3",
@@ -94,7 +99,8 @@ export const messagesInfoBar = [
       name: "Jlkjkla Jjaksdjka",
       avatar_url: "https://github.com/profile.png",
     },
-    content: "JXDD sakdjakldjalsk asdjklajdslk :)",
+    content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
+    sent_at: "01/08/2022",
   },
   {
     id: "4",
@@ -102,7 +108,8 @@ export const messagesInfoBar = [
       name: "Hasjdkalsjd Dadskadjal",
       avatar_url: "https://github.com/profile.png",
     },
-    content: "JXDD sakdjakldjalsk asdjklajdslk :)",
+    content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
+    sent_at: "3 days ago",
   },
   {
     id: "5",
@@ -110,6 +117,9 @@ export const messagesInfoBar = [
       name: "Hajhsldahjl Hhjasdhak",
       avatar_url: "https://github.com/profile.png",
     },
-    content: "JXDD sakdjakldjalsk asdjklajdslk :)",
+    content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
+    sent_at: "6 days ago",
+    is_unreaded: true,
+    unreaded_messages_count: 69,
   },
 ];

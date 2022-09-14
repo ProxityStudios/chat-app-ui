@@ -10,7 +10,12 @@ import {
   ConversationMessagesBarStyle,
   MessageInfo,
   MessageInfoContent,
+  MessageInfoContentIsTyping,
+  MessageInfoContentView,
   MessageInfoHeading,
+  MessageInfoHeadingView,
+  MessageInfoSentAt,
+  MessageInfoUnreadedMessagesCount,
   MessageInfoView,
   MessagesInfo,
   StarusBar,
@@ -22,35 +27,14 @@ export function ConversationMessagesInfoBar(
   props: ConversationMessagesBarInfoProps
 ) {
   const router = useRouter();
+
   return (
     <ConversationMessagesBarStyle>
       <StarusBar>
         <IconButton>
           <BsPlusCircleDotted size={57} />
         </IconButton>
-        <Link href={`/conversations/${router.query.conversationId}`} passHref>
-          <AvatarWrapper>
-            <AvatarContainer>
-              <Avatar
-                height={60}
-                width={60}
-                src="https://github.com/profile.png"
-              />
-            </AvatarContainer>
-          </AvatarWrapper>
-        </Link>{" "}
-        <Link href={`/conversations/${router.query.conversationId}`} passHref>
-          <AvatarWrapper>
-            <AvatarContainer>
-              <Avatar
-                height={60}
-                width={60}
-                src="https://github.com/profile.png"
-              />
-            </AvatarContainer>
-          </AvatarWrapper>
-        </Link>{" "}
-        <Link href={`/conversations/${router.query.conversationId}`} passHref>
+        <Link href={`/conversations/1`} passHref>
           <AvatarWrapper>
             <AvatarContainer>
               <Avatar
@@ -61,7 +45,7 @@ export function ConversationMessagesInfoBar(
             </AvatarContainer>
           </AvatarWrapper>
         </Link>
-        <Link href={`/conversations/${router.query.conversationId}`} passHref>
+        <Link href={`/conversations/2`} passHref>
           <AvatarWrapper>
             <AvatarContainer>
               <Avatar
@@ -72,7 +56,62 @@ export function ConversationMessagesInfoBar(
             </AvatarContainer>
           </AvatarWrapper>
         </Link>
-        <Link href={`/conversations/${router.query.conversationId}`} passHref>
+        <Link href={`/conversations/3`} passHref>
+          <AvatarWrapper>
+            <AvatarContainer>
+              <Avatar
+                height={60}
+                width={60}
+                src="https://github.com/profile.png"
+              />
+            </AvatarContainer>
+          </AvatarWrapper>
+        </Link>
+        <Link href={`/conversations/4`} passHref>
+          <AvatarWrapper>
+            <AvatarContainer>
+              <Avatar
+                height={60}
+                width={60}
+                src="https://github.com/profile.png"
+              />
+            </AvatarContainer>
+          </AvatarWrapper>
+        </Link>
+        <Link href={`/conversations/4`} passHref>
+          <AvatarWrapper>
+            <AvatarContainer>
+              <Avatar
+                height={60}
+                width={60}
+                src="https://github.com/profile.png"
+              />
+            </AvatarContainer>
+          </AvatarWrapper>
+        </Link>
+        <Link href={`/conversations/4`} passHref>
+          <AvatarWrapper>
+            <AvatarContainer>
+              <Avatar
+                height={60}
+                width={60}
+                src="https://github.com/profile.png"
+              />
+            </AvatarContainer>
+          </AvatarWrapper>
+        </Link>
+        <Link href={`/conversations/4`} passHref>
+          <AvatarWrapper>
+            <AvatarContainer>
+              <Avatar
+                height={60}
+                width={60}
+                src="https://github.com/profile.png"
+              />
+            </AvatarContainer>
+          </AvatarWrapper>
+        </Link>
+        <Link href={`/conversations/4`} passHref>
           <AvatarWrapper>
             <AvatarContainer>
               <Avatar
@@ -92,7 +131,9 @@ export function ConversationMessagesInfoBar(
             href={`/conversations/${messageInfo.id}`}
             passHref
           >
-            <MessageInfo>
+            <MessageInfo
+              active={router.asPath === `/conversations/${messageInfo.id}`}
+            >
               <AvatarContainer>
                 <Avatar
                   height={60}
@@ -101,10 +142,31 @@ export function ConversationMessagesInfoBar(
                 />
               </AvatarContainer>
               <MessageInfoView>
-                <MessageInfoHeading>
-                  {messageInfo.author.name}
-                </MessageInfoHeading>
-                <MessageInfoContent>{messageInfo.content}</MessageInfoContent>
+                <MessageInfoHeadingView>
+                  <MessageInfoHeading>
+                    {messageInfo.author.name}
+                  </MessageInfoHeading>
+                  <MessageInfoSentAt isUnreaded={messageInfo.is_unreaded}>
+                    {messageInfo.sent_at}
+                  </MessageInfoSentAt>
+                </MessageInfoHeadingView>
+                <MessageInfoContentView isUnreaded={messageInfo.is_unreaded}>
+                  <MessageInfoContent>
+                    {messageInfo.is_typing ? (
+                      <MessageInfoContentIsTyping>
+                        {messageInfo.author.name} is typing...
+                      </MessageInfoContentIsTyping>
+                    ) : (
+                      messageInfo.content
+                    )}
+                  </MessageInfoContent>
+                  {messageInfo.unreaded_messages_count &&
+                    messageInfo.is_unreaded && (
+                      <MessageInfoUnreadedMessagesCount>
+                        {messageInfo.unreaded_messages_count}
+                      </MessageInfoUnreadedMessagesCount>
+                    )}
+                </MessageInfoContentView>
               </MessageInfoView>
             </MessageInfo>
           </Link>

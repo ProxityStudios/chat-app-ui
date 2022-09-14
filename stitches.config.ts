@@ -25,7 +25,7 @@ export const {
       xlarge: ".8rem",
     },
     colors: {
-      borderColor: "hsl(0, 3%, 22%)",
+      borderColor: "hsl(0, 2%, 15%)",
       dividerColor: "hsl(230, 41%, 19%)",
 
       background: "hsl(234, 18%, 11%)",
@@ -54,6 +54,9 @@ export const {
       yellow700: "hsl(52, 96%, 43%)",
       yellow800: "hsl(52, 96%, 32%)",
       yellow900: "hsl(52, 96%, 26%)",
+
+      // TODO: add nesciaind
+      green500: "hsl(142, 70%, 49%)",
 
       red100: "hsl(352, 93%, 92%)",
       red200: "hsl(352, 93%, 88%)",
