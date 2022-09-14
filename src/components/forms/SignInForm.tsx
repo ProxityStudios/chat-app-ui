@@ -45,7 +45,7 @@ export function SignInForm(props: SignInFormProps) {
             type="email"
             id="email-input"
             name="email"
-            placeholder="ticho@proxitystudios.tk"
+            placeholder="example@mail.com"
             required
           />
         </InputContainer>

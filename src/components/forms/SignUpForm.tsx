@@ -38,7 +38,7 @@ export function SignUpForm(props: SignUpFormProps) {
             type="text"
             id="username-input"
             name="username"
-            placeholder="TichoIsCool"
+            placeholder="Tichoooooo"
             required
           />
           <InputInformation>How others should call you?</InputInformation>
@@ -51,7 +51,7 @@ export function SignUpForm(props: SignUpFormProps) {
             type="email"
             id="email-input"
             name="email"
-            placeholder="ticho@proxitystudios.tk"
+            placeholder="example@mail.com"
             required
           />
           <InputInformation>
