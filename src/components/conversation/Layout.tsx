@@ -1,10 +1,11 @@
 import * as React from "react";
 import { Conversation } from "../../utils/styles/conversation/Conversation";
 import {
-  ConversationContent,
   ConversationLayoutStyle,
+  ConversationView,
 } from "../../utils/styles/conversation/ConversationLayout";
 import ConversationHeader from "./Header";
+import ConversationMessages from "./Messages";
 import ConversationMessagesInfoBar from "./MessagesInfoBar";
 import ConversationNavigationBar from "./NavigationBar";
 import ConversationRightBar from "./RightBar";
@@ -18,14 +19,16 @@ export function ConversationLayout({ children }: ConversationLayoutProps) {
     <ConversationLayoutStyle>
       <ConversationHeader />
 
-      <ConversationContent>
+      <ConversationView>
         <ConversationNavigationBar />
         <ConversationMessagesInfoBar />
 
-        <Conversation>{children}</Conversation>
+        <Conversation>
+          <ConversationMessages />
+        </Conversation>
 
         <ConversationRightBar />
-      </ConversationContent>
+      </ConversationView>
     </ConversationLayoutStyle>
   );
 }

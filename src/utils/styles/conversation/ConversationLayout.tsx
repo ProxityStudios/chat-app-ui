@@ -10,7 +10,7 @@ export const ConversationLayoutStyle = styled("div", {
   overflow: "hidden",
 });
 
-export const ConversationContent = styled("main", {
+export const ConversationView = styled("main", {
   flex: 1,
   height: "100%",
   display: "flex",
