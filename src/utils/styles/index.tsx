@@ -110,11 +110,17 @@ export const InputContainer = styled("div", {
 
 export const InputLabel = styled("label", {
   textTransform: "uppercase",
-  display: "block",
+  display: "inline-block",
   color: "inherit",
   marginBottom: "12px",
   fontSize: ".7rem",
   fontWeight: 700,
+});
+
+export const InputRequired = styled("span", {
+  color: "$red300",
+  marginLeft: 4,
+  fontSize: "0.8rem",
 });
 
 export const InputField = styled("input", {

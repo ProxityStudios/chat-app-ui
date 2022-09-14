@@ -7,6 +7,7 @@ import {
   InputContainer,
   InputField,
   InputLabel,
+  InputRequired,
   Link,
 } from "../../utils/styles";
 import {
@@ -31,6 +32,7 @@ export function SignUpForm(props: SignUpFormProps) {
       <SignUpFormInputsContainer>
         <InputContainer>
           <InputLabel htmlFor="username-input">Username</InputLabel>
+          <InputRequired>*</InputRequired>
           <InputField
             type="text"
             id="username-input"
@@ -42,6 +44,7 @@ export function SignUpForm(props: SignUpFormProps) {
 
         <InputContainer>
           <InputLabel htmlFor="email-input">Email</InputLabel>
+          <InputRequired>*</InputRequired>
           <InputField
             type="email"
             id="email-input"
@@ -52,6 +55,7 @@ export function SignUpForm(props: SignUpFormProps) {
         </InputContainer>
         <InputContainer>
           <InputLabel htmlFor="password-input">Password</InputLabel>
+          <InputRequired>*</InputRequired>
           <InputField
             type="password"
             id="password-input"

@@ -19,7 +19,7 @@ export const AuthPageContainer = styled("div", {
   justifyContent: "center",
   "@sm": {
     height: "min-content",
-    width: "425px",
+    width: 425,
     borderRadius: "$large",
   },
   padding: "2rem",
@@ -27,7 +27,7 @@ export const AuthPageContainer = styled("div", {
 
 export const SignInFormHeading = styled("h2", {
   textAlign: "center",
-  marginBottom: "42px",
+  marginBottom: 42,
 });
 
 export const SignInFormInputsContainer = styled("div", {

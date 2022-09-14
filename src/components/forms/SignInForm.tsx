@@ -8,6 +8,7 @@ import {
   InputContainer,
   InputField,
   InputLabel,
+  InputRequired,
   Link,
 } from "../../utils/styles";
 import {
@@ -39,6 +40,7 @@ export function SignInForm(props: SignInFormProps) {
       <SignInFormInputsContainer>
         <InputContainer>
           <InputLabel htmlFor="email-input">Email</InputLabel>
+          <InputRequired>*</InputRequired>
           <InputField
             type="email"
             id="email-input"
@@ -49,6 +51,7 @@ export function SignInForm(props: SignInFormProps) {
         </InputContainer>
         <InputContainer>
           <InputLabel htmlFor="password-input">Password</InputLabel>
+          <InputRequired>*</InputRequired>
           <InputField
             type="password"
             id="password-input"
