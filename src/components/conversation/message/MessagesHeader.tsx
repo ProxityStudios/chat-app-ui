@@ -7,6 +7,7 @@ import {
   AuthorAction,
   AuthorActions,
   AuthorContentView,
+  AuthorContentViewContent,
   AuthorContentViewHeading,
   AuthorView,
   MessagesHeaderStyle,
@@ -28,6 +29,9 @@ export function MessagesHeader(props: MessagesHeaderProps) {
             <AuthorContentViewHeading>
               {conversation?.creator.displayName}
             </AuthorContentViewHeading>
+            <AuthorContentViewContent>
+              {conversation?.creator.email}
+            </AuthorContentViewContent>
           </AuthorContentView>
         </AuthorView>
       </Link>

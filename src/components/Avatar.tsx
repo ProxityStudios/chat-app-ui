@@ -14,9 +14,16 @@ export interface AvatarProps
   src: string;
 }
 
-function AvatarContainer({ children, ...rest }: AvatarContainerProps) {
-  return <AvatarContainerStyle {...rest}>{children}</AvatarContainerStyle>;
-}
+const AvatarContainer: React.ForwardRefRenderFunction<
+  HTMLDivElement,
+  AvatarContainerProps
+> = ({ children, ...rest }, ref) => (
+  <AvatarContainerStyle ref={ref} {...rest}>
+    {children}
+  </AvatarContainerStyle>
+);
+
+const ForwardedAvatarContainer = React.forwardRef(AvatarContainer);
 
 function Avatar({ size, ...rest }: AvatarProps) {
   return <AvatarStyle width={size} height={size} {...rest} />;
@@ -30,9 +37,9 @@ const ForwardedAvatar: React.ForwardRefRenderFunction<
   CombinedProps
 > = ({ containerProps, ...props }, ref) => {
   return (
-    <AvatarContainer {...containerProps} ref={ref}>
+    <ForwardedAvatarContainer {...containerProps} ref={ref}>
       <Avatar placeholder="blur" blurDataURL={props.src} {...props} />
-    </AvatarContainer>
+    </ForwardedAvatarContainer>
   );
 };
 

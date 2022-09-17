@@ -34,7 +34,11 @@ export const AuthorContentViewHeading = styled("h3", {
   fontWeight: 400,
   fontSize: 19,
   marginTop: 4,
-  marginBottom: 6,
+});
+export const AuthorContentViewContent = styled("span", {
+  fontWeight: 500,
+  fontSize: 13,
+  color: "DarkGray",
 });
 export const AuthorActions = styled("div", {
   display: "flex",
