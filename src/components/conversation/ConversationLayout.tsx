@@ -10,6 +10,7 @@ import {
 import Header from "../Header";
 import NavigationBar from "../NavigationBar";
 import ConversationsBar from "./ConversationsBar";
+import ConversationSharedMediaBar from "./ConversationSharedMedia";
 
 export interface ConversationLayoutProps {
   children: React.ReactNode;
@@ -54,6 +55,7 @@ export function ConversationLayout({ children }: ConversationLayoutProps) {
         <NavigationBar />
         <ConversationsBar />
         <div style={{ width: "100%" }}>{children}</div>
+        <ConversationSharedMediaBar />
       </ConversationView>
     </ConversationLayoutStyle>
   );
