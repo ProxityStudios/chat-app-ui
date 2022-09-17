@@ -1,8 +1,7 @@
-import Image from "next/image";
 import { styled } from "../../../../stitches.config";
 
 export const ConversationMessagesBarStyle = styled("aside", {
-  width: 420,
+  width: 437,
   flexShrink: 0,
   background: "$backgroundSecondary",
   borderRight: "1px $borderColor solid",
@@ -23,22 +22,6 @@ export const StarusBar = styled("div", {
     display: "none",
   },
 });
-
-export const AvatarWrapper = styled("a", {
-  flexShrink: 0,
-});
-export const AvatarContainer = styled("div", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: "100%",
-  background: "$background",
-  overflow: "hidden",
-  flexShrink: 0,
-  height: "max-content",
-  width: "max-content",
-});
-export const Avatar = styled(Image, {});
 
 export const MessagesInfo = styled("div", {});
 export const MessageInfo = styled("div", {

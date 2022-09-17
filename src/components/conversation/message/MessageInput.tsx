@@ -10,7 +10,7 @@ export function ConversationMessageInput(props: MessageInputProps) {
     <ConversationMessageInputView>
       <ConversationMessageInputStyle
         type="text"
-        placeholder="Send a Message.."
+        placeholder="Type your Message"
       />
     </ConversationMessageInputView>
   );

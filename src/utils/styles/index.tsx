@@ -10,12 +10,23 @@ export const Link = styled("a", {
   },
 });
 
-export const IconButton = styled("button", {
+export const BaseButton = styled("button", {
   appearance: "none",
-  background: "transparent",
-  outline: "none",
   border: "none",
+  outline: "none",
+  borderRadius: "$base",
   cursor: "pointer",
+  background: "transparent",
+  fontWeight: 500,
+  variants: {
+    width: {
+      full: {
+        width: "100%",
+      },
+    },
+  },
+});
+export const IconButton = styled(BaseButton, {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -25,20 +36,10 @@ export const IconButton = styled("button", {
   },
 });
 
-export const Button = styled("button", {
-  border: "none",
-  outline: "none",
-  borderRadius: "$base",
-  cursor: "pointer",
-  transition: "background 200ms ease-out, border 200ms ease",
+export const Button = styled(BaseButton, {
   padding: "0 20px",
-  fontWeight: 500,
+  transition: "background 200ms ease-out, border 200ms ease",
   variants: {
-    width: {
-      full: {
-        width: "100%",
-      },
-    },
     size: {
       small: {
         height: "32px",

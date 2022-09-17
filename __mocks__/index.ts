@@ -1,76 +1,3 @@
-export const servers = [
-  {
-    id: 1,
-    name: "Server 1",
-    selected: true,
-    image: "https://github.com/ProxityStudios.png",
-    creator: {
-      id: 1000,
-      name: "Ticho",
-    },
-  },
-  {
-    id: 2,
-    name: "Server 2",
-    image: "https://github.com/ProxityStudios.png",
-
-    creator: {
-      id: 1000,
-      name: "Ticho",
-    },
-  },
-  {
-    id: 3,
-    name: "Server 3",
-    image: "https://github.com/ProxityStudios.png",
-
-    creator: {
-      id: 1000,
-      name: "Ticho",
-    },
-  },
-  {
-    id: 4,
-    name: "Server 4",
-    image: "https://github.com/ProxityStudios.png",
-
-    creator: {
-      id: 1000,
-      name: "Ticho",
-    },
-  },
-  {
-    id: 5,
-    name: "Server 5",
-    image: "https://github.com/ProxityStudios.png",
-
-    creator: {
-      id: 1000,
-      name: "Ticho",
-    },
-  },
-  {
-    id: 6,
-    name: "Server 6",
-    image: "https://github.com/ProxityStudios.png",
-
-    creator: {
-      id: 1000,
-      name: "Ticho",
-    },
-  },
-  {
-    id: 7,
-    name: "Server 7",
-    image: "https://github.com/ProxityStudios.png",
-
-    creator: {
-      id: 1000,
-      name: "Ticho",
-    },
-  },
-];
-
 export const messagesInfoBar = [
   {
     id: "1",
@@ -92,6 +19,7 @@ export const messagesInfoBar = [
     content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
     is_typing: true,
     sent_at: "yesterday",
+    is_stared: true,
   },
   {
     id: "3",
@@ -110,6 +38,7 @@ export const messagesInfoBar = [
     },
     content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
     sent_at: "3 days ago",
+    is_stared: true,
   },
   {
     id: "5",
@@ -120,6 +49,75 @@ export const messagesInfoBar = [
     content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
     sent_at: "6 days ago",
     is_unreaded: true,
+    unreaded_messages_count: 69,
+  },
+  {
+    id: "6",
+    author: {
+      name: "Hajhsldahjl Hhjasdhak",
+      avatar_url: "https://github.com/profile.png",
+    },
+    content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
+    sent_at: "6 days ago",
+    is_unreaded: false,
+    unreaded_messages_count: 69,
+    is_stared: true,
+  },
+  {
+    id: "7",
+    author: {
+      name: "Hajhsldahjl Hhjasdhak",
+      avatar_url: "https://github.com/profile.png",
+    },
+    content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
+    sent_at: "6 days ago",
+    is_unreaded: false,
+    unreaded_messages_count: 69,
+  },
+  {
+    id: "8",
+    author: {
+      name: "Hajhsldahjl Hhjasdhak",
+      avatar_url: "https://github.com/profile.png",
+    },
+    content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
+    sent_at: "6 days ago",
+    is_unreaded: false,
+    unreaded_messages_count: 69,
+  },
+  {
+    id: "9",
+    author: {
+      name: "Hajhsldahjl Hhjasdhak",
+      avatar_url: "https://github.com/profile.png",
+    },
+    content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
+    sent_at: "6 days ago",
+    is_unreaded: false,
+    unreaded_messages_count: 69,
+  },
+  {
+    id: "10",
+    author: {
+      name: "Hajhsldahjl Hhjasdhak",
+      avatar_url: "https://github.com/profile.png",
+    },
+    content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
+    sent_at: "6 days ago",
+    is_unreaded: false,
+    is_stared: true,
+    unreaded_messages_count: 69,
+  },
+  {
+    id: "11",
+    author: {
+      name: "Hajhsldahjl Hhjasdhak",
+      avatar_url: "https://github.com/profile.png",
+    },
+    content: "JXDD sakdjakldjalsk asdjklajdslk :) saasdas asd asas asd",
+    sent_at: "6 days ago",
+    is_unreaded: false,
+    is_stared: true,
     unreaded_messages_count: 69,
   },
 ];

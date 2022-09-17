@@ -8,7 +8,7 @@ import ConversationHeader from "./Header";
 import ConversationMessages from "./Messages";
 import ConversationMessagesInfoBar from "./MessagesInfoBar";
 import ConversationNavigationBar from "./NavigationBar";
-import ConversationRightBar from "./RightBar";
+import ConversationSharedMediaBar from "./SharedMedia";
 
 export interface ConversationLayoutProps {
   children: React.ReactNode;
@@ -27,7 +27,7 @@ export function ConversationLayout({ children }: ConversationLayoutProps) {
           <ConversationMessages />
         </Conversation>
 
-        <ConversationRightBar />
+        <ConversationSharedMediaBar />
       </ConversationView>
     </ConversationLayoutStyle>
   );

@@ -4,9 +4,6 @@ import { BsPlusCircleDotted } from "react-icons/bs";
 import { messagesInfoBar } from "../../../__mocks__";
 import { IconButton } from "../../utils/styles";
 import {
-  Avatar,
-  AvatarContainer,
-  AvatarWrapper,
   ConversationMessagesBarStyle,
   MessageInfo,
   MessageInfoContent,
@@ -20,6 +17,7 @@ import {
   MessagesInfo,
   StarusBar,
 } from "../../utils/styles/conversation/ConversationMessagesInfoBar";
+import Avatar from "./Avatar";
 
 export interface ConversationMessagesBarInfoProps {}
 
@@ -34,94 +32,16 @@ export function ConversationMessagesInfoBar(
         <IconButton>
           <BsPlusCircleDotted size={57} />
         </IconButton>
-        <Link href={`/conversations/1`} passHref>
-          <AvatarWrapper>
-            <AvatarContainer>
-              <Avatar
-                height={60}
-                width={60}
-                src="https://github.com/profile.png"
-              />
-            </AvatarContainer>
-          </AvatarWrapper>
-        </Link>
-        <Link href={`/conversations/2`} passHref>
-          <AvatarWrapper>
-            <AvatarContainer>
-              <Avatar
-                height={60}
-                width={60}
-                src="https://github.com/profile.png"
-              />
-            </AvatarContainer>
-          </AvatarWrapper>
-        </Link>
-        <Link href={`/conversations/3`} passHref>
-          <AvatarWrapper>
-            <AvatarContainer>
-              <Avatar
-                height={60}
-                width={60}
-                src="https://github.com/profile.png"
-              />
-            </AvatarContainer>
-          </AvatarWrapper>
-        </Link>
-        <Link href={`/conversations/4`} passHref>
-          <AvatarWrapper>
-            <AvatarContainer>
-              <Avatar
-                height={60}
-                width={60}
-                src="https://github.com/profile.png"
-              />
-            </AvatarContainer>
-          </AvatarWrapper>
-        </Link>
-        <Link href={`/conversations/4`} passHref>
-          <AvatarWrapper>
-            <AvatarContainer>
-              <Avatar
-                height={60}
-                width={60}
-                src="https://github.com/profile.png"
-              />
-            </AvatarContainer>
-          </AvatarWrapper>
-        </Link>
-        <Link href={`/conversations/4`} passHref>
-          <AvatarWrapper>
-            <AvatarContainer>
-              <Avatar
-                height={60}
-                width={60}
-                src="https://github.com/profile.png"
-              />
-            </AvatarContainer>
-          </AvatarWrapper>
-        </Link>
-        <Link href={`/conversations/4`} passHref>
-          <AvatarWrapper>
-            <AvatarContainer>
-              <Avatar
-                height={60}
-                width={60}
-                src="https://github.com/profile.png"
-              />
-            </AvatarContainer>
-          </AvatarWrapper>
-        </Link>
-        <Link href={`/conversations/4`} passHref>
-          <AvatarWrapper>
-            <AvatarContainer>
-              <Avatar
-                height={60}
-                width={60}
-                src="https://github.com/profile.png"
-              />
-            </AvatarContainer>
-          </AvatarWrapper>
-        </Link>
+        {messagesInfoBar
+          .filter((messageInfo) => messageInfo.is_stared)
+          .map((messageInfo) => (
+            <Link
+              key={messageInfo.id}
+              href={`/conversations/${messageInfo.id}`}
+            >
+              <Avatar size={57} src={messageInfo.author.avatar_url} />
+            </Link>
+          ))}
       </StarusBar>
 
       <MessagesInfo>
@@ -134,13 +54,7 @@ export function ConversationMessagesInfoBar(
             <MessageInfo
               active={router.asPath === `/conversations/${messageInfo.id}`}
             >
-              <AvatarContainer>
-                <Avatar
-                  height={60}
-                  width={60}
-                  src="https://github.com/profile.png"
-                />
-              </AvatarContainer>
+              <Avatar size={57} src={messageInfo.author.avatar_url} />
               <MessageInfoView>
                 <MessageInfoHeadingView>
                   <MessageInfoHeading>
