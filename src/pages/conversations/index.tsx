@@ -1,8 +1,16 @@
 import ConversationLayout from "../../components/conversation/ConversationLayout";
+import {
+  ConversationsPage,
+  Heading,
+} from "../../utils/styles/pages/ConversationsPage";
 import { NextPageWithLayout } from "../../utils/types";
 
 const Conversations: NextPageWithLayout = () => {
-  return <div>Select a conversation in the left panel</div>;
+  return (
+    <ConversationsPage>
+      <Heading>Select a Conversation In The Left Panel</Heading>
+    </ConversationsPage>
+  );
 };
 
 Conversations.getLayout = (page) => {

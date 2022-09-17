@@ -53,7 +53,7 @@ export function ConversationLayout({ children }: ConversationLayoutProps) {
       <ConversationView>
         <NavigationBar />
         <ConversationsBar />
-        {children}
+        <div style={{ width: "100%" }}>{children}</div>
       </ConversationView>
     </ConversationLayoutStyle>
   );

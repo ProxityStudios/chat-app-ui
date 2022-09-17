@@ -11,6 +11,7 @@ export const ConversationLayoutStyle = styled("div", {
 });
 
 export const ConversationView = styled("main", {
+  width: "100%",
   flex: 1,
   height: "100%",
   display: "flex",
