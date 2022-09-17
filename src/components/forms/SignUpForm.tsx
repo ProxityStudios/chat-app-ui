@@ -1,6 +1,7 @@
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
+import { useAuth } from "../../contexts/AuthContext";
 import {
   Button,
   Divider,
@@ -21,9 +22,16 @@ export interface SignUpFormProps {}
 
 export function SignUpForm(props: SignUpFormProps) {
   const router = useRouter();
+  const { login } = useAuth();
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
+    console.log("Inside sign up form submit function");
+    console.log("Email:", e.currentTarget.email.value);
+    console.log("Password:", e.currentTarget.password.value);
+
+    // sign up instead of login
+    login(e.currentTarget.email.value, e.currentTarget.password.value);
     router.push("/conversations");
   };
 
