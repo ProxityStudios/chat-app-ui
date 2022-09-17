@@ -57,6 +57,7 @@ export const Button = styled(BaseButton, {
     color: {
       accent: {
         background: "$accent500",
+        color: "black",
         "&:hover": {
           background: "$accent600",
         },
