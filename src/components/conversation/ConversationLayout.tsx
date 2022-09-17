@@ -7,8 +7,8 @@ import {
   ConversationLayoutStyle,
   ConversationView,
 } from "../../utils/styles/conversation/ConversationLayout";
+import Header from "../Header";
 import NavigationBar from "../NavigationBar";
-import ConversationHeader from "./ConversationHeader";
 import ConversationsBar from "./ConversationsBar";
 
 export interface ConversationLayoutProps {
@@ -48,7 +48,7 @@ export function ConversationLayout({ children }: ConversationLayoutProps) {
 
   return (
     <ConversationLayoutStyle>
-      <ConversationHeader />
+      <Header />
 
       <ConversationView>
         <NavigationBar />

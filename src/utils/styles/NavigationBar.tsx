@@ -9,7 +9,7 @@ export const NavigationBarStyle = styled("aside", {
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "flex-start",
-  gap: 30,
+  gap: 3,
   padding: "20px 0",
   borderRight: "1px $borderColor solid",
 });
@@ -19,13 +19,14 @@ export const IconLink = styled(Link, {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  padding: 10,
+  borderRadius: "$xlarge",
+  transition: "110ms background ease-out",
   variants: {
     active: {
       true: {
         background: "#5555",
         color: "$accent300",
-        padding: 10,
-        borderRadius: "$xlarge",
         "&::after": {
           content: "",
           borderRadius: "$xlarge",
@@ -37,6 +38,11 @@ export const IconLink = styled(Link, {
           background: "$accent300",
           width: 4,
           height: "45%",
+        },
+      },
+      false: {
+        "&:hover": {
+          background: "#222",
         },
       },
     },

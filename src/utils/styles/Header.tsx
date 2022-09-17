@@ -1,6 +1,6 @@
-import { styled } from "../../../../stitches.config";
+import { styled } from "../../../stitches.config";
 
-export const ConversationHeaderStyle = styled("header", {
+export const HeaderStyle = styled("header", {
   height: 60,
   display: "flex",
   alignItems: "center",
