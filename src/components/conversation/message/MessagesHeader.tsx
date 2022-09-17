@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BsTelephone } from "react-icons/bs";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { RiUserSettingsLine } from "react-icons/ri";
+import { useConversation } from "../../../contexts/ConversationContext";
 import {
   AuthorAction,
   AuthorActions,
@@ -16,17 +17,23 @@ import Avatar from "../../Avatar";
 export interface MessagesHeaderProps {}
 
 export function MessagesHeader(props: MessagesHeaderProps) {
+  const { conversation } = useConversation();
+  console.log(conversation);
+
   return (
     <MessagesHeaderStyle>
       <Link href="#" passHref>
         <AuthorView>
-          <Avatar size={75} src="https://github.com/profile.png" />
+          <Avatar size={75} src={conversation?.creator.avatarUrl!} />
           <AuthorContentView>
             <AuthorContentViewHeading>
-              Nmaod Hmandosund
+              {conversation?.creator.displayName}
             </AuthorContentViewHeading>
             <AuthorContentViewContent>
-              Biography | Online status etc.
+              {conversation?.isTyping &&
+                `${conversation.creator.displayName} is typing...`}
+              {(!conversation?.isTyping && conversation?.creator.biography) ??
+                "No bio"}
             </AuthorContentViewContent>
           </AuthorContentView>
         </AuthorView>

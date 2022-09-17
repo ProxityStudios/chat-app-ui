@@ -42,8 +42,8 @@ export function ConversationLayout({ children }: ConversationLayoutProps) {
       console.log("Conversation not exists, redirecting");
       router.push("/conversations", undefined, { shallow: true });
     }
-    // }, [router.asPath, router.isReady]);
-  }, [router.isReady]);
+    // }, [router.isReady]);
+  }, [router.asPath, router.isReady]);
 
   return (
     <ConversationLayoutStyle>

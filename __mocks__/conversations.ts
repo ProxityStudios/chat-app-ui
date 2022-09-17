@@ -14,7 +14,7 @@ export const __conversations__: Conversation[] = [
       displayName: "Tichooo Is Enginner",
       email: "ticho@proxitystudios.tk",
       biography: "Lorem ipsum dolar sit amet consetcetur",
-      avatarUrl: "https://github.com/profile.png",
+      avatarUrl: "https://github.com/Tichooo.png",
     },
     messages: [
       {
@@ -22,11 +22,11 @@ export const __conversations__: Conversation[] = [
         createdAt: new Date(),
         content: "Hello",
         author: {
-          id: "001",
+          id: "01",
           email: "ticho@proxitystudios.tk",
           displayName: "Tichooo Is Enginner",
           biography: "Lorem ipsum dolar sit amet consetcetur",
-          avatarUrl: "https://github.com/profile.png",
+          avatarUrl: "https://github.com/Tichooo.png",
         },
       },
       {
@@ -34,11 +34,53 @@ export const __conversations__: Conversation[] = [
         createdAt: __lastMessageSentAt__,
         content: "Hello there???",
         author: {
-          id: "001",
+          id: "01",
           email: "ticho@proxitystudios.tk",
           displayName: "Tichooo Is Enginner",
           biography: "Lorem ipsum dolar sit amet consetcetur",
-          avatarUrl: "https://github.com/profile.png",
+          avatarUrl: "https://github.com/Tichooo.png",
+        },
+      },
+    ],
+    createdAt: new Date(),
+    lastMessageSentAt: __lastMessageSentAt__,
+  },
+  {
+    id: "2",
+    isStared: false,
+    isUnreaded: false,
+    isTyping: true,
+    unreadedMessagesCount: 0,
+    creator: {
+      id: "02",
+      displayName: "Crawl Is Engineer",
+      email: "crawl@proxitystudios.tk",
+      biography: "Lorem ipsum dolar sit amet consetcetur",
+      avatarUrl: "https://github.com/CrawlTheDev2.png",
+    },
+    messages: [
+      {
+        id: "003",
+        createdAt: new Date(),
+        content: "Hello",
+        author: {
+          id: "02",
+          email: "ticho@proxitystudios.tk",
+          displayName: "Tichooo Is Enginner",
+          biography: "Lorem ipsum dolar sit amet consetcetur",
+          avatarUrl: "https://github.com/CrawlTheDev2.png",
+        },
+      },
+      {
+        id: "004",
+        createdAt: __lastMessageSentAt__,
+        content: "Hello there???",
+        author: {
+          id: "02",
+          email: "ticho@proxitystudios.tk",
+          displayName: "Tichooo Is Enginner",
+          biography: "Lorem ipsum dolar sit amet consetcetur",
+          avatarUrl: "https://github.com/CrawlTheDev2.png",
         },
       },
     ],
