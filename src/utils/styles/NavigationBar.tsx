@@ -8,8 +8,9 @@ export const NavigationBarStyle = styled("aside", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent: "center",
+  justifyContent: "flex-start",
   gap: 30,
+  padding: "20px 0",
   borderRight: "1px $borderColor solid",
 });
 

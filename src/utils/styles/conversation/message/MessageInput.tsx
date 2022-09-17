@@ -8,4 +8,5 @@ export const MessageInputStyle = styled(InputField, {
   maxWidth: 1276,
   margin: "0 auto",
   display: "block",
+  height: 55,
 });
