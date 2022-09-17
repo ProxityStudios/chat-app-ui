@@ -27,9 +27,7 @@ export function ConversationHeader(props: ConversationHeaderProps) {
         />
       </InputContainer>
 
-      <Button size="small" onClick={() => logout()}>
-        Sign out
-      </Button>
+      <Button onClick={() => logout()}>Sign out</Button>
     </ConversationHeaderStyle>
   );
 }
