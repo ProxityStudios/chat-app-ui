@@ -1,7 +1,7 @@
 import { styled } from "../../../../stitches.config";
 
 export const ConversationHeaderStyle = styled("header", {
-  height: 70,
+  height: 60,
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",

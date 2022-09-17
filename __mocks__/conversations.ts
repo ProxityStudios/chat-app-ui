@@ -11,7 +11,7 @@ export const __conversations__: Conversation[] = [
     unreadedMessagesCount: 15,
     creator: {
       id: "01",
-      displayName: "Tichooo Is Enginner",
+      displayName: "Ticho Lawy",
       email: "ticho@proxitystudios.tk",
       biography: "Lorem ipsum dolar sit amet consetcetur",
       avatarUrl: "https://github.com/Tichooo.png",
@@ -32,7 +32,7 @@ export const __conversations__: Conversation[] = [
       {
         id: "002",
         createdAt: __lastMessageSentAt__,
-        content: "Hello there???",
+        content: "Hello there??? Can you respond me???????",
         author: {
           id: "01",
           email: "ticho@proxitystudios.tk",
@@ -53,7 +53,7 @@ export const __conversations__: Conversation[] = [
     unreadedMessagesCount: 0,
     creator: {
       id: "02",
-      displayName: "Crawl Is Engineer",
+      displayName: "Crawl Prothe",
       email: "crawl@proxitystudios.tk",
       biography: "Lorem ipsum dolar sit amet consetcetur",
       avatarUrl: "https://github.com/CrawlTheDev2.png",

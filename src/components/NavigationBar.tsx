@@ -11,27 +11,27 @@ export function NavigationBar(props: NavigationBarProps) {
     <NavigationBarStyle>
       <Link href={`/conversations`} passHref>
         <IconLink active={true}>
-          <MdOutlineSpaceDashboard size={40} />
+          <MdOutlineSpaceDashboard size={30} />
         </IconLink>
       </Link>
       <Link href={`/conversations`} passHref>
         <IconLink>
-          <VscFiles size={40} />
+          <VscFiles size={30} />
         </IconLink>
       </Link>
       <Link href={`/conversations`} passHref>
         <IconLink>
-          <BsCalendarDate size={40} />
+          <BsCalendarDate size={30} />
         </IconLink>
       </Link>
       <Link href={`/conversations`} passHref>
         <IconLink>
-          <BsPeople size={40} />
+          <BsPeople size={30} />
         </IconLink>
       </Link>
       <Link href={`/conversations`} passHref>
         <IconLink>
-          <MdSettingsSuggest size={40} />
+          <MdSettingsSuggest size={30} />
         </IconLink>
       </Link>
     </NavigationBarStyle>

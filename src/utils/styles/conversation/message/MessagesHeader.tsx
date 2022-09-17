@@ -13,10 +13,14 @@ export const MessagesHeaderStyle = styled("header", {
 
 export const AuthorView = styled("div", {
   display: "flex",
-  flexShrink: 0,
+  alignItems: "center",
+  padding: "2px 12px",
+  height: 70,
+  // flexShrink: 0,
   cursor: "pointer",
-  padding: 10,
   borderRadius: "$base",
+  maxWidth: 300,
+  minWidth: 220,
   transition: "background 150ms ease-out",
   "&:hover": {
     background: "#6666",
@@ -24,15 +28,13 @@ export const AuthorView = styled("div", {
 });
 
 export const AuthorContentView = styled("div", {
-  marginLeft: 20,
+  marginLeft: 12,
 });
 export const AuthorContentViewHeading = styled("h3", {
   fontWeight: 400,
-  fontSize: "1.700rem",
-  marginBottom: 10,
-});
-export const AuthorContentViewContent = styled("em", {
-  color: "DimGray",
+  fontSize: 19,
+  marginTop: 4,
+  marginBottom: 6,
 });
 export const AuthorActions = styled("div", {
   display: "flex",

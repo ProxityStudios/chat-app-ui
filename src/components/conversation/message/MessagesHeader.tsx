@@ -7,7 +7,6 @@ import {
   AuthorAction,
   AuthorActions,
   AuthorContentView,
-  AuthorContentViewContent,
   AuthorContentViewHeading,
   AuthorView,
   MessagesHeaderStyle,
@@ -24,29 +23,23 @@ export function MessagesHeader(props: MessagesHeaderProps) {
     <MessagesHeaderStyle>
       <Link href="#" passHref>
         <AuthorView>
-          <Avatar size={75} src={conversation?.creator.avatarUrl!} />
+          <Avatar size={52} src={conversation?.creator.avatarUrl!} />
           <AuthorContentView>
             <AuthorContentViewHeading>
               {conversation?.creator.displayName}
             </AuthorContentViewHeading>
-            <AuthorContentViewContent>
-              {conversation?.isTyping &&
-                `${conversation.creator.displayName} is typing...`}
-              {(!conversation?.isTyping && conversation?.creator.biography) ??
-                "No bio"}
-            </AuthorContentViewContent>
           </AuthorContentView>
         </AuthorView>
       </Link>
       <AuthorActions>
         <AuthorAction>
-          <HiOutlineVideoCamera size={50} />
+          <HiOutlineVideoCamera size={30} />
         </AuthorAction>
         <AuthorAction>
-          <BsTelephone size={35} />
+          <BsTelephone size={22} />
         </AuthorAction>
         <AuthorAction>
-          <RiUserSettingsLine size={35} />
+          <RiUserSettingsLine size={25} />
         </AuthorAction>
       </AuthorActions>
     </MessagesHeaderStyle>

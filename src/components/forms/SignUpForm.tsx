@@ -89,6 +89,7 @@ export function SignUpForm(props: SignUpFormProps) {
           marginTop: 35,
         }}
         width="full"
+        size="large"
         type="submit"
       >
         Sign up

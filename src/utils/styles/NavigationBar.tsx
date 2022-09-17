@@ -2,7 +2,7 @@ import { styled } from "../../../stitches.config";
 import { Link } from "./index";
 
 export const NavigationBarStyle = styled("aside", {
-  width: 90,
+  width: 75,
   flexShrink: 0,
   overflow: "auto",
   display: "flex",
@@ -21,7 +21,7 @@ export const IconLink = styled(Link, {
   variants: {
     active: {
       true: {
-        background: "$backgroundSecondary",
+        background: "#5555",
         color: "$accent300",
         padding: 10,
         borderRadius: "$xlarge",

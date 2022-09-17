@@ -33,14 +33,14 @@ export const SignInFormHeading = styled("h2", {
 export const SignInFormInputsContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  gap: "26px",
+  gap: 26,
 });
 
 export const SignInFormFooter = styled("span", {
-  fontSize: "14px",
+  fontSize: 14,
   display: "block",
   textAlign: "center",
-  color: "white",
+  color: "DarkGray",
 });
 
 export const SignUpFormHeading = styled("h2", {
@@ -51,12 +51,12 @@ export const SignUpFormHeading = styled("h2", {
 export const SignUpFormInputsContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  gap: "26px",
+  gap: 26,
 });
 
 export const SignUpFormFooter = styled("span", {
-  fontSize: "14px",
+  fontSize: 14,
   display: "block",
   textAlign: "center",
-  color: "white",
+  color: "DarkGray",
 });

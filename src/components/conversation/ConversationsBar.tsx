@@ -28,7 +28,7 @@ export function ConversationsBar(props: ConversationsBarProps) {
     <ConversationsBarStyle>
       <ConversationStarus>
         <IconButton>
-          <BsPlusCircleDotted size={57} />
+          <BsPlusCircleDotted size={45} />
         </IconButton>
         {__conversations__
           .filter((conversation) => conversation.isStared)
@@ -37,7 +37,7 @@ export function ConversationsBar(props: ConversationsBarProps) {
               key={conversation.id}
               href={`/conversations/${conversation.id}`}
             >
-              <Avatar size={57} src={conversation.creator.avatarUrl} />
+              <Avatar size={45} src={conversation.creator.avatarUrl} />
             </Link>
           ))}
       </ConversationStarus>
@@ -52,7 +52,7 @@ export function ConversationsBar(props: ConversationsBarProps) {
             <Conversation
               active={router.asPath === `/conversations/${conversation.id}`}
             >
-              <Avatar size={57} src={conversation.creator.avatarUrl} />
+              <Avatar size={50} src={conversation.creator.avatarUrl} />
               <ConversationView>
                 <ConversationHead>
                   <ConversationHeading>
@@ -61,8 +61,9 @@ export function ConversationsBar(props: ConversationsBarProps) {
                   <ConversationLastMessageSentAt
                     isUnreaded={conversation.isUnreaded}
                   >
-                    {conversation.lastMessageSentAt &&
-                      conversation.lastMessageSentAt.toDateString()}
+                    {/* {conversation.lastMessageSentAt &&
+                      conversation.lastMessageSentAt.toDateString()} */}
+                    today
                   </ConversationLastMessageSentAt>
                 </ConversationHead>
                 <ConversationContentView isUnreaded={conversation.isUnreaded}>

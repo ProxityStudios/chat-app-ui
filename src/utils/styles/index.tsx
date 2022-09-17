@@ -3,10 +3,11 @@ import { styled } from "../../../stitches.config";
 export const Link = styled("a", {
   appearance: "none",
   color: "$accent500",
-  textDecoration: "underline",
+  textDecoration: "none",
   padding: "0 6px",
   "&:hover": {
     color: "$accent300",
+    textDecoration: "underline",
   },
 });
 
@@ -31,27 +32,36 @@ export const IconButton = styled(BaseButton, {
   alignItems: "center",
   justifyContent: "center",
   color: "$accent500",
+  borderRadius: "100%",
   "&:hover": {
     color: "$accent300",
+  },
+  "&:focus": {
+    outline: "1px white solid",
   },
 });
 
 export const Button = styled(BaseButton, {
-  padding: "0 20px",
+  padding: "2px 16px",
   transition: "background 200ms ease-out, border 200ms ease",
+  whiteSpace: "nowrap",
+  textoverflow: "ellipsis",
+  overflow: "hidden",
+  fontWeight: 500,
+  fontSize: "100%",
   variants: {
     size: {
       small: {
-        height: "32px",
-        fontSize: ".92rem",
+        height: 30,
+        fontWeight: 16,
       },
       medium: {
-        height: "37px",
-        fontSize: "1.1rem",
+        height: 35,
+        fontWeight: 16,
       },
       large: {
-        height: "42px",
-        fontSize: "1.3rem",
+        height: 44,
+        fontWeight: 18,
       },
     },
     color: {
@@ -114,21 +124,21 @@ export const InputLabel = styled("label", {
   textTransform: "uppercase",
   display: "inline-block",
   color: "inherit",
-  marginBottom: "12px",
-  fontSize: ".7rem",
+  marginBottom: 12,
+  fontSize: 12,
   fontWeight: 700,
 });
 
 export const InputRequired = styled("span", {
   color: "$red300",
   marginLeft: 4,
-  fontSize: "0.8rem",
+  fontSize: 10,
 });
 
 export const InputInformation = styled("p", {
   display: "block",
-  color: "SlateGray",
-  fontSize: "0.7rem",
+  color: "DarkGray",
+  fontSize: 12,
   fontWeight: 400,
   marginTop: 10,
   marginLeft: 2,
@@ -151,6 +161,6 @@ export const InputField = styled("input", {
     border: "1px $accent500 solid",
   },
   "&:hover": {
-    border: "1px $accent500 solid",
+    // border: "1px $accent500 solid",
   },
 });

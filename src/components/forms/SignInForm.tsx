@@ -70,6 +70,7 @@ export function SignInForm(props: SignInFormProps) {
         }}
         width="full"
         type="submit"
+        size="large"
       >
         Sign in
       </Button>
