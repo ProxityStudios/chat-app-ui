@@ -26,7 +26,7 @@ export const {
     },
     colors: {
       borderColor: "hsl(0, 2%, 15%)",
-      dividerColor: "hsl(230, 41%, 19%)",
+      dividerColor: "hsl(0, 0%, 19%)",
 
       background: "hsl(234, 18%, 11%)",
       backgroundSecondary: "hsl(234, 15%, 14%)",
