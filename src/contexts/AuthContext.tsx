@@ -25,10 +25,11 @@ export function AuthProvider(props: AuthProviderProps) {
 
     // dummy
     setUser({
-      id: "987456897416365798",
+      id: "01",
       displayName: "Ticho Is Engineer",
       email,
       password,
+      avatarUrl: "https://github.com/Tichooo",
     });
   }
   function logout() {

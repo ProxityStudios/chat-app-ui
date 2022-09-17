@@ -26,8 +26,8 @@ export function SignInForm(props: SignInFormProps) {
   const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     console.log("Inside sign in form submit function");
-    console.log(e.currentTarget.email.value);
-    console.log(e.currentTarget.password.value);
+    console.log("Email:", e.currentTarget.email.value);
+    console.log("Password:", e.currentTarget.password.value);
 
     login(e.currentTarget.email.value, e.currentTarget.password.value);
     router.push("/conversations");

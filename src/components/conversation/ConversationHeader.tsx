@@ -1,3 +1,4 @@
+import { useAuth } from "../../contexts/AuthContext";
 import { useConversation } from "../../contexts/ConversationContext";
 import { Button, InputContainer, InputField } from "../../utils/styles";
 import {
@@ -9,6 +10,7 @@ export interface ConversationHeaderProps {}
 
 export function ConversationHeader(props: ConversationHeaderProps) {
   const { conversation } = useConversation();
+  const { logout } = useAuth();
 
   return (
     <ConversationHeaderStyle>
@@ -27,7 +29,9 @@ export function ConversationHeader(props: ConversationHeaderProps) {
 
       {conversation?.id}
 
-      <Button size="small">Profile Dropdown</Button>
+      <Button size="small" onClick={() => logout()}>
+        Sign out
+      </Button>
     </ConversationHeaderStyle>
   );
 }

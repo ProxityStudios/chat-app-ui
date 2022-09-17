@@ -23,6 +23,7 @@ export function ConversationLayout({ children }: ConversationLayoutProps) {
   React.useEffect(() => {
     if (!router.isReady) return;
     if (!user) {
+      console.log("Auth failed, redirecting");
       router.push("/auth/sign-in", undefined, { shallow: true });
       return;
     }
@@ -43,7 +44,7 @@ export function ConversationLayout({ children }: ConversationLayoutProps) {
       router.push("/conversations", undefined, { shallow: true });
     }
     // }, [router.isReady]);
-  }, [router.asPath, router.isReady]);
+  }, [user, router.asPath, router.isReady]);
 
   return (
     <ConversationLayoutStyle>

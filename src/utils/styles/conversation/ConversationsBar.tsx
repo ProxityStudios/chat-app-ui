@@ -97,7 +97,7 @@ export const ConversationContent = styled("p", {
   textOverflow: "ellipsis",
 });
 export const ConversationContentIsTyping = styled("em", {
-  color: "$green500",
+  color: "$accent500",
 });
 export const ConversationUnreadedMessagesCount = styled("span", {
   background: "$green500",
