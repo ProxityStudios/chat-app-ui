@@ -3,14 +3,14 @@ import { User } from "../utils/types";
 
 interface AuthContextType {
   user: User | null;
-  login(email: string, password: string): void | null;
-  logout(): void | null;
+  login(email: string, password: string): void;
+  logout(): void;
 }
 
 export const AuthContext = React.createContext<AuthContextType>({
   user: null,
-  login: () => null,
-  logout: () => null,
+  login: () => {},
+  logout: () => {},
 });
 
 export interface AuthProviderProps {
@@ -26,7 +26,7 @@ export function AuthProvider(props: AuthProviderProps) {
     // dummy
     setUser({
       id: "987456897416365798",
-      username: "Ticho",
+      displayName: "Ticho Is Engineer",
       email,
       password,
     });

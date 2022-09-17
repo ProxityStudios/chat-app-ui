@@ -3,49 +3,47 @@ import { BsTelephone } from "react-icons/bs";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { RiUserSettingsLine } from "react-icons/ri";
 import {
-  ConversationAuthorAction,
-  ConversationAuthorActions,
-  ConversationAuthorContentView,
-  ConversationAuthorView,
-  ConversationAuthorViewContent,
-  ConversationAuthorViewHeading,
-  ConversationMessagesHeaderStyle,
+  AuthorAction,
+  AuthorActions,
+  AuthorContentView,
+  AuthorContentViewContent,
+  AuthorContentViewHeading,
+  AuthorView,
+  MessagesHeaderStyle,
 } from "../../../utils/styles/conversation/message/MessagesHeader";
-import Avatar from "../Avatar";
+import Avatar from "../../Avatar";
 
-export interface ConversationMessagesHeaderProps {}
+export interface MessagesHeaderProps {}
 
-export function ConversationMessagesHeader(
-  props: ConversationMessagesHeaderProps
-) {
+export function MessagesHeader(props: MessagesHeaderProps) {
   return (
-    <ConversationMessagesHeaderStyle>
+    <MessagesHeaderStyle>
       <Link href="#" passHref>
-        <ConversationAuthorView>
+        <AuthorView>
           <Avatar size={75} src="https://github.com/profile.png" />
-          <ConversationAuthorContentView>
-            <ConversationAuthorViewHeading>
+          <AuthorContentView>
+            <AuthorContentViewHeading>
               Nmaod Hmandosund
-            </ConversationAuthorViewHeading>
-            <ConversationAuthorViewContent>
-              Biography|Online status etc.
-            </ConversationAuthorViewContent>
-          </ConversationAuthorContentView>
-        </ConversationAuthorView>
+            </AuthorContentViewHeading>
+            <AuthorContentViewContent>
+              Biography | Online status etc.
+            </AuthorContentViewContent>
+          </AuthorContentView>
+        </AuthorView>
       </Link>
-      <ConversationAuthorActions>
-        <ConversationAuthorAction>
+      <AuthorActions>
+        <AuthorAction>
           <HiOutlineVideoCamera size={50} />
-        </ConversationAuthorAction>
-        <ConversationAuthorAction>
+        </AuthorAction>
+        <AuthorAction>
           <BsTelephone size={35} />
-        </ConversationAuthorAction>
-        <ConversationAuthorAction>
+        </AuthorAction>
+        <AuthorAction>
           <RiUserSettingsLine size={35} />
-        </ConversationAuthorAction>
-      </ConversationAuthorActions>
-    </ConversationMessagesHeaderStyle>
+        </AuthorAction>
+      </AuthorActions>
+    </MessagesHeaderStyle>
   );
 }
 
-export default ConversationMessagesHeader;
+export default MessagesHeader;

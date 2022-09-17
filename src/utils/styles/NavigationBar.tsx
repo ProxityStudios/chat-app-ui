@@ -1,7 +1,7 @@
-import { styled } from "../../../../stitches.config";
-import { Link } from "../index";
+import { styled } from "../../../stitches.config";
+import { Link } from "./index";
 
-export const ConversationNavigationBarStyle = styled("aside", {
+export const NavigationBarStyle = styled("aside", {
   width: 90,
   flexShrink: 0,
   overflow: "auto",

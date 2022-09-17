@@ -1,19 +1,16 @@
 import {
-  ConversationMessageInputStyle,
-  ConversationMessageInputView,
+  MessageInputStyle,
+  MessageInputView,
 } from "../../../utils/styles/conversation/message/MessageInput";
 
 export interface MessageInputProps {}
 
-export function ConversationMessageInput(props: MessageInputProps) {
+export function MessageInput(props: MessageInputProps) {
   return (
-    <ConversationMessageInputView>
-      <ConversationMessageInputStyle
-        type="text"
-        placeholder="Type your Message"
-      />
-    </ConversationMessageInputView>
+    <MessageInputView>
+      <MessageInputStyle type="text" placeholder="Type your Message" />
+    </MessageInputView>
   );
 }
 
-export default ConversationMessageInput;
+export default MessageInput;

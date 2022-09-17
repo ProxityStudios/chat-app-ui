@@ -1,10 +1,16 @@
-import { useRouter } from "next/router";
-import ConversationLayout from "../../../components/conversation/Layout";
+import ConversationLayout from "../../../components/conversation/ConversationLayout";
+import ConversationMessages from "../../../components/conversation/ConversationMessages";
+import ConversationSharedMediaBar from "../../../components/conversation/ConversationSharedMedia";
 import { NextPageWithLayout } from "../../../utils/types";
 
 const Conversation: NextPageWithLayout = () => {
-  const router = useRouter();
-  return <div>Conversation {router.query.conversationId}</div>;
+  return (
+    <>
+      <ConversationMessages />
+
+      <ConversationSharedMediaBar />
+    </>
+  );
 };
 
 Conversation.getLayout = (page) => {

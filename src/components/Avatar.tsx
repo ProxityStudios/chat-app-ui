@@ -1,8 +1,5 @@
 import * as React from "react";
-import {
-  AvatarContainerStyle,
-  AvatarStyle,
-} from "../../utils/styles/conversation/ConversationAvatar";
+import { AvatarContainerStyle, AvatarStyle } from "../utils/styles/Avatar";
 
 export type AvatarContainerType = typeof AvatarContainerStyle;
 export type AvatarType = typeof AvatarStyle;

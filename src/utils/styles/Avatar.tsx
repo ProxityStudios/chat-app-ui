@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { styled } from "../../../../stitches.config";
+import { styled } from "../../../stitches.config";
 
 export const AvatarContainerStyle = styled("div", {
   display: "flex",

@@ -1,6 +1,6 @@
 import { styled } from "../../../../stitches.config";
 
-export const ConversationMessagesBarStyle = styled("aside", {
+export const ConversationsBarStyle = styled("aside", {
   width: 437,
   flexShrink: 0,
   background: "$backgroundSecondary",
@@ -8,7 +8,7 @@ export const ConversationMessagesBarStyle = styled("aside", {
   overflow: "auto",
 });
 
-export const StarusBar = styled("div", {
+export const ConversationStarus = styled("div", {
   padding: "0 20px",
   height: "$conversationTopBase",
   borderBottom: "1px $borderColor solid",
@@ -23,8 +23,9 @@ export const StarusBar = styled("div", {
   },
 });
 
-export const MessagesInfo = styled("div", {});
-export const MessageInfo = styled("div", {
+export const Conversations = styled("div", {});
+
+export const Conversation = styled("div", {
   padding: 20,
   borderBottom: "1px $borderColor solid",
   cursor: "pointer",
@@ -44,16 +45,24 @@ export const MessageInfo = styled("div", {
     },
   },
 });
-export const MessageInfoView = styled("div", {
+
+export const ConversationView = styled("div", {
   marginLeft: 12,
   width: "100%",
   overflow: "hidden",
 });
-export const MessageInfoHeadingView = styled("div", {
+
+export const ConversationHead = styled("div", {
   display: "flex",
   justifyContent: "space-between",
 });
-export const MessageInfoSentAt = styled("span", {
+export const ConversationHeading = styled("h5", {
+  marginTop: 6,
+  fontWeight: 400,
+  fontSize: "1rem",
+  letterSpacing: 0.2,
+});
+export const ConversationLastMessageSentAt = styled("span", {
   color: "DimGray",
   variants: {
     isUnreaded: {
@@ -64,13 +73,7 @@ export const MessageInfoSentAt = styled("span", {
   },
 });
 
-export const MessageInfoHeading = styled("h5", {
-  marginTop: 6,
-  fontWeight: 400,
-  fontSize: "1rem",
-  letterSpacing: 0.2,
-});
-export const MessageInfoContentView = styled("div", {
+export const ConversationContentView = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
@@ -84,7 +87,7 @@ export const MessageInfoContentView = styled("div", {
     },
   },
 });
-export const MessageInfoContent = styled("p", {
+export const ConversationContent = styled("p", {
   whiteSpace: "nowrap",
   display: "inline-block",
   fontSize: "0.875rem",
@@ -93,11 +96,10 @@ export const MessageInfoContent = styled("p", {
   overflow: "hidden",
   textOverflow: "ellipsis",
 });
-export const MessageInfoContentIsTyping = styled("em", {
+export const ConversationContentIsTyping = styled("em", {
   color: "$green500",
 });
-
-export const MessageInfoUnreadedMessagesCount = styled("span", {
+export const ConversationUnreadedMessagesCount = styled("span", {
   background: "$green500",
   color: "black",
   borderRadius: "100%",

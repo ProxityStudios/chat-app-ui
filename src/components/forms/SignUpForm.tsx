@@ -24,7 +24,7 @@ export function SignUpForm(props: SignUpFormProps) {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push("/conversations/1");
+    router.push("/conversations");
   };
 
   return (
@@ -32,13 +32,13 @@ export function SignUpForm(props: SignUpFormProps) {
       <SignUpFormHeading>Sign up to continue</SignUpFormHeading>
       <SignUpFormInputsContainer>
         <InputContainer>
-          <InputLabel htmlFor="username-input">Username</InputLabel>
+          <InputLabel htmlFor="display-name-input">Display Name</InputLabel>
           <InputRequired>*</InputRequired>
           <InputField
             type="text"
-            id="username-input"
-            name="username"
-            placeholder="Tichoooooo"
+            id="display-name-input"
+            name="display-name"
+            placeholder="Ticho Lawy"
             required
           />
           <InputInformation>How others should call you?</InputInformation>

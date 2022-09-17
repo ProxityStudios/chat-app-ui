@@ -1,10 +1,10 @@
 import { InputField } from "../..";
 import { styled } from "../../../../../stitches.config";
 
-export const ConversationMessageInputView = styled("div", {
+export const MessageInputView = styled("div", {
   padding: "0 $horizontalBase $horizontalBase $horizontalBase",
 });
-export const ConversationMessageInputStyle = styled(InputField, {
+export const MessageInputStyle = styled(InputField, {
   maxWidth: 1276,
   margin: "0 auto",
   display: "block",
