@@ -1,6 +1,6 @@
 import { styled } from "../../../../stitches.config";
 
-export const ConversationMessagesStyle = styled("div", {
+export const ConversationContentContainerStyle = styled("div", {
   width: "100%",
   height: "100%",
   display: "flex",
@@ -8,7 +8,7 @@ export const ConversationMessagesStyle = styled("div", {
   justifyContent: "space-between",
 });
 
-export const ConversationMessagesContent = styled("div", {
+export const ConversationContentStyle = styled("div", {
   overflow: "auto",
   flex: 1,
   padding: "40px $horizontalBase",

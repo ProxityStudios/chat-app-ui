@@ -1,7 +1,7 @@
-import ConversationLayout from "../../components/conversation/ConversationLayout";
+import { ConversationLayout } from "../../components/conversation/ConversationLayout";
 import {
   ConversationsPage,
-  Heading,
+  Heading
 } from "../../utils/styles/pages/ConversationsPage";
 import { NextPageWithLayout } from "../../utils/types";
 

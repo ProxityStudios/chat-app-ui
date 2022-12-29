@@ -1,14 +1,11 @@
-import ConversationLayout from "../../../components/conversation/ConversationLayout";
-import ConversationMessages from "../../../components/conversation/ConversationMessages";
-import ConversationSharedMediaBar from "../../../components/conversation/ConversationSharedMedia";
+import ConversationContent from "../../../components/conversation/ConversationContent";
+import { ConversationLayout } from "../../../components/conversation/ConversationLayout";
 import { NextPageWithLayout } from "../../../utils/types";
 
 const Conversation: NextPageWithLayout = () => {
   return (
     <>
-      <ConversationMessages />
-
-      <ConversationSharedMediaBar />
+      <ConversationContent />
     </>
   );
 };

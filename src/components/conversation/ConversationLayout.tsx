@@ -4,13 +4,10 @@ import { __conversations__ } from "../../../__mocks__/conversations";
 import { useAuth } from "../../contexts/AuthContext";
 import { useConversation } from "../../contexts/ConversationContext";
 import {
-  ConversationLayoutStyle,
-  ConversationView,
+  ConversationLayoutContainerStyle
 } from "../../utils/styles/conversation/ConversationLayout";
-import Header from "../Header";
 import NavigationBar from "../NavigationBar";
 import ConversationsBar from "./ConversationsBar";
-import ConversationSharedMediaBar from "./ConversationSharedMedia";
 
 export interface ConversationLayoutProps {
   children: React.ReactNode;
@@ -48,17 +45,12 @@ export function ConversationLayout({ children }: ConversationLayoutProps) {
   }, [user, router.asPath, router.isReady]);
 
   return (
-    <ConversationLayoutStyle>
-      <Header />
-
-      <ConversationView>
-        <NavigationBar />
-        <ConversationsBar />
-        <div style={{ width: "100%" }}>{children}</div>
-        <ConversationSharedMediaBar />
-      </ConversationView>
-    </ConversationLayoutStyle>
+    <ConversationLayoutContainerStyle>
+      <NavigationBar />
+      <ConversationsBar />
+      <div style={{ width: "100%" }}>{children}</div>
+    </ConversationLayoutContainerStyle>
   );
 }
 
-export default ConversationLayout;
+

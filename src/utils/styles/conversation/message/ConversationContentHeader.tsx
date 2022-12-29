@@ -1,7 +1,7 @@
 import { IconButton } from "../..";
 import { styled } from "../../../../../stitches.config";
 
-export const MessagesHeaderStyle = styled("header", {
+export const ConversationContentHeaderContainerStyle = styled("header", {
   height: "$conversationTopBase",
   borderBottom: "1px $borderColor solid",
   display: "flex",
@@ -11,7 +11,7 @@ export const MessagesHeaderStyle = styled("header", {
   overflow: "hidden",
 });
 
-export const AuthorView = styled("div", {
+export const ConversationContentHeaderAuthorContainerStyle = styled("a", {
   display: "flex",
   alignItems: "center",
   padding: "2px 12px",
@@ -27,10 +27,10 @@ export const AuthorView = styled("div", {
   },
 });
 
-export const AuthorContentView = styled("div", {
+export const ConversationContentHeaderAuthorStyle = styled("div", {
   marginLeft: 12,
 });
-export const AuthorContentViewHeading = styled("h3", {
+export const ConversationContentHeaderAuthorHeadingStyle = styled("h3", {
   fontWeight: 400,
   fontSize: 19,
   marginTop: 4,
@@ -40,11 +40,11 @@ export const AuthorContentViewContent = styled("span", {
   fontSize: 13,
   color: "DarkGray",
 });
-export const AuthorActions = styled("div", {
+export const ConversationContentHeaderAuthorActionsStyle = styled("div", {
   display: "flex",
   alignItems: "center",
   marginRight: 15,
   gap: 20,
 });
 
-export const AuthorAction = styled(IconButton, {});
+export const ConversationContentHeaderAuthorAction = styled(IconButton, {});
