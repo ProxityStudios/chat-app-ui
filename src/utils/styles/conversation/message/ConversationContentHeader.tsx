@@ -35,7 +35,7 @@ export const ConversationContentHeaderAuthorHeadingStyle = styled("h3", {
   fontSize: 19,
   marginTop: 4,
 });
-export const AuthorContentViewContent = styled("span", {
+export const ConversationContentHeaderAuthorEmailStyle = styled("span", {
   fontWeight: 500,
   fontSize: 13,
   color: "DarkGray",

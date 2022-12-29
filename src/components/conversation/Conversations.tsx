@@ -4,29 +4,29 @@ import { BsPlusCircleDotted } from "react-icons/bs";
 import { __conversations__ } from "../../../__mocks__/conversations";
 import { IconButton } from "../../utils/styles";
 import {
-  Conversation,
+  ConversationStyle,
   ConversationContent,
   ConversationContentIsTyping,
   ConversationContentView,
   ConversationHead,
   ConversationHeading,
   ConversationLastMessageSentAt,
-  Conversations,
-  ConversationsBarStyle,
-  ConversationStarus,
+  ConversationsContentStyle,
+  ConversationsContainerStyle,
+  ConversationStarusContainerStyle,
   ConversationUnreadedMessagesCount,
-  ConversationView,
-} from "../../utils/styles/conversation/ConversationsBar";
+  ConversationContentStyle,
+} from "../../utils/styles/conversation/Conversations";
 import Avatar from "../Avatar";
 
-export interface ConversationsBarProps {}
+export interface ConversationsProps {}
 
-export function ConversationsBar(props: ConversationsBarProps) {
+export function Conversations(props: ConversationsProps) {
   const router = useRouter();
 
   return (
-    <ConversationsBarStyle>
-      <ConversationStarus>
+    <ConversationsContainerStyle>
+      <ConversationStarusContainerStyle>
         <IconButton>
           <BsPlusCircleDotted size={45} />
         </IconButton>
@@ -36,59 +36,62 @@ export function ConversationsBar(props: ConversationsBarProps) {
             <Link
               key={conversation.id}
               href={`/conversations/${conversation.id}`}
+              passHref
             >
+              <a>
               <Avatar size={45} src={conversation.creator.avatarUrl} />
+              </a>
             </Link>
           ))}
-      </ConversationStarus>
+      </ConversationStarusContainerStyle>
 
-      <Conversations>
-        {__conversations__.map((conversation) => (
+      <ConversationsContentStyle>
+        {__conversations__.map((c) => (
           <Link
-            key={conversation.id}
-            href={`/conversations/${conversation.id}`}
+            key={c.id}
+            href={`/conversations/${c.id}`}
             passHref
           >
-            <Conversation
-              active={router.asPath === `/conversations/${conversation.id}`}
+            <ConversationStyle
+              active={router.asPath === `/conversations/${c.id}`}
             >
-              <Avatar size={50} src={conversation.creator.avatarUrl} />
-              <ConversationView>
+              <Avatar size={50} src={c.creator.avatarUrl} />
+              <ConversationContentStyle>
                 <ConversationHead>
                   <ConversationHeading>
-                    {conversation.creator.displayName}
+                    {c.creator.displayName}
                   </ConversationHeading>
                   <ConversationLastMessageSentAt
-                    isUnreaded={conversation.isUnreaded}
+                    isUnreaded={c.isUnreaded}
                   >
                     {/* {conversation.lastMessageSentAt &&
                       conversation.lastMessageSentAt.toDateString()} */}
                     today
                   </ConversationLastMessageSentAt>
                 </ConversationHead>
-                <ConversationContentView isUnreaded={conversation.isUnreaded}>
+                <ConversationContentView isUnreaded={c.isUnreaded}>
                   <ConversationContent>
-                    {conversation.isTyping ? (
+                    {c.isTyping ? (
                       <ConversationContentIsTyping>
-                        {conversation.creator.displayName} is typing...
+                        {c.creator.displayName} is typing...
                       </ConversationContentIsTyping>
                     ) : (
-                      conversation.messages.slice(-1)[0].content
+                      c.messages.slice(-1)[0].content
                     )}
                   </ConversationContent>
-                  {conversation.isUnreaded && (
+                  {c.isUnreaded && (
                     <ConversationUnreadedMessagesCount>
-                      {conversation.unreadedMessagesCount}
+                      {c.unreadedMessagesCount}
                     </ConversationUnreadedMessagesCount>
                   )}
                 </ConversationContentView>
-              </ConversationView>
-            </Conversation>
+              </ConversationContentStyle>
+            </ConversationStyle>
           </Link>
         ))}
-      </Conversations>
-    </ConversationsBarStyle>
+      </ConversationsContentStyle>
+    </ConversationsContainerStyle>
   );
 }
 
-export default ConversationsBar;
+export default Conversations;

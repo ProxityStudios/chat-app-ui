@@ -1,7 +1,7 @@
 import { styled } from "../../../stitches.config";
 import { Link } from "./index";
 
-export const NavigationBarStyle = styled("aside", {
+export const AppNavigationContainerStyle = styled("aside", {
   width: 75,
   flexShrink: 0,
   overflow: "auto",
@@ -14,7 +14,7 @@ export const NavigationBarStyle = styled("aside", {
   borderRight: "1px $borderColor solid",
 });
 
-export const IconLink = styled(Link, {
+export const AppNavigationLinkStyle = styled(Link, {
   position: "relative",
   display: "flex",
   alignItems: "center",

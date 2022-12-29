@@ -1,13 +1,11 @@
 import { useRouter } from "next/router";
 import * as React from "react";
 import { __conversations__ } from "../../../__mocks__/conversations";
-import { useAuth } from "../../contexts/AuthContext";
 import { useConversation } from "../../contexts/ConversationContext";
 import {
-  ConversationLayoutContainerStyle
+  ConversationLayoutContainerStyle, ConversationLayoutContentStyle
 } from "../../utils/styles/conversation/ConversationLayout";
-import NavigationBar from "../NavigationBar";
-import ConversationsBar from "./ConversationsBar";
+import Conversations from "./Conversations";
 
 export interface ConversationLayoutProps {
   children: React.ReactNode;
@@ -15,16 +13,10 @@ export interface ConversationLayoutProps {
 
 export function ConversationLayout({ children }: ConversationLayoutProps) {
   const { selectConversation } = useConversation();
-  const { user } = useAuth();
   const router = useRouter();
 
   React.useEffect(() => {
-    if (!router.isReady) return;
-    if (!user) {
-      console.log("Auth failed, redirecting");
-      router.push("/auth/sign-in", undefined, { shallow: true });
-      return;
-    }
+     if (!router.isReady) return;
 
     // fetch stuff
     const conversations = __conversations__;
@@ -42,13 +34,12 @@ export function ConversationLayout({ children }: ConversationLayoutProps) {
       router.push("/conversations", undefined, { shallow: true });
     }
     // }, [router.isReady]);
-  }, [user, router.asPath, router.isReady]);
+  }, [router.isReady]);
 
   return (
     <ConversationLayoutContainerStyle>
-      <NavigationBar />
-      <ConversationsBar />
-      <div style={{ width: "100%" }}>{children}</div>
+      <Conversations />
+      <ConversationLayoutContentStyle>{children}</ConversationLayoutContentStyle>
     </ConversationLayoutContainerStyle>
   );
 }

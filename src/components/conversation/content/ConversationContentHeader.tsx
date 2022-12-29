@@ -3,18 +3,16 @@ import { BsTelephone } from "react-icons/bs";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { RiUserSettingsLine } from "react-icons/ri";
 import { useConversation } from "../../../contexts/ConversationContext";
-import { AuthorContentViewContent, ConversationContentHeaderAuthorAction, ConversationContentHeaderAuthorActionsStyle, ConversationContentHeaderAuthorContainerStyle, ConversationContentHeaderAuthorHeadingStyle, ConversationContentHeaderAuthorStyle, ConversationContentHeaderContainerStyle } from "../../../utils/styles/conversation/message/ConversationContentHeader";
+import { ConversationContentHeaderAuthorAction, ConversationContentHeaderAuthorActionsStyle, ConversationContentHeaderAuthorContainerStyle, ConversationContentHeaderAuthorEmailStyle, ConversationContentHeaderAuthorHeadingStyle, ConversationContentHeaderAuthorStyle, ConversationContentHeaderContainerStyle } from "../../../utils/styles/conversation/message/ConversationContentHeader";
 import Avatar from "../../Avatar";
 
 export interface ConversationContentHeaderProps { }
 
 export function ConversationContentHeader(props: ConversationContentHeaderProps) {
   const { conversation } = useConversation();
-  console.log(conversation);
 
   return (
     <ConversationContentHeaderContainerStyle>
-
       <Link href={`/profiles/${conversation?.creator.id}`} passHref>
         <ConversationContentHeaderAuthorContainerStyle>
           <Avatar size={52} src={conversation?.creator.avatarUrl!} />
@@ -22,12 +20,14 @@ export function ConversationContentHeader(props: ConversationContentHeaderProps)
             <ConversationContentHeaderAuthorHeadingStyle>
               {conversation?.creator.displayName}
             </ConversationContentHeaderAuthorHeadingStyle>
-            <AuthorContentViewContent>
+            <ConversationContentHeaderAuthorEmailStyle>
               {conversation?.creator.email}
-            </AuthorContentViewContent>
+            </ConversationContentHeaderAuthorEmailStyle>
           </ConversationContentHeaderAuthorStyle>
         </ConversationContentHeaderAuthorContainerStyle>
       </Link>
+
+      {/* actions to conversation author */}
 
       <ConversationContentHeaderAuthorActionsStyle>
         <ConversationContentHeaderAuthorAction>

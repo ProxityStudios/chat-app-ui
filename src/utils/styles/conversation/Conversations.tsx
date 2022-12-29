@@ -1,15 +1,15 @@
 import { styled } from "../../../../stitches.config";
 
-export const ConversationsBarStyle = styled("aside", {
-  width: 350,
+export const ConversationsContainerStyle = styled("aside", {
+  width: 300,
   flexShrink: 0,
   background: "$backgroundSecondary",
   borderRight: "1px $borderColor solid",
   overflow: "auto",
 });
 
-export const ConversationStarus = styled("div", {
-  padding: "0 20px",
+export const ConversationStarusContainerStyle = styled("div", {
+  padding: "0 12px",
   height: "$conversationTopBase",
   borderBottom: "1px $borderColor solid",
   display: "flex",
@@ -23,10 +23,10 @@ export const ConversationStarus = styled("div", {
   },
 });
 
-export const Conversations = styled("div", {});
+export const ConversationsContentStyle = styled("div", {});
 
-export const Conversation = styled("a", {
-  padding: 20,
+export const ConversationStyle = styled("a", {
+  padding: "16px 12px",
   borderBottom: "1px $borderColor solid",
   cursor: "pointer",
   transition: "background 150ms ease-out",
@@ -46,7 +46,7 @@ export const Conversation = styled("a", {
   },
 });
 
-export const ConversationView = styled("div", {
+export const ConversationContentStyle = styled("div", {
   marginLeft: 12,
   width: "100%",
   overflow: "hidden",

@@ -1,3 +1,4 @@
+import AppLayout from "../../components/AppLayout";
 import { ConversationLayout } from "../../components/conversation/ConversationLayout";
 import {
   ConversationsPage,
@@ -14,7 +15,9 @@ const Conversations: NextPageWithLayout = () => {
 };
 
 Conversations.getLayout = (page) => {
-  return <ConversationLayout>{page}</ConversationLayout>;
+  return <AppLayout>
+     <ConversationLayout>{page}</ConversationLayout>
+  </AppLayout>
 };
 
 export default Conversations;

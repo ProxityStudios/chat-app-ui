@@ -13,7 +13,7 @@ export const {
   prefix: "chat-app",
   theme: {
     sizes: {
-      conversationTopBase: "90px",
+      conversationTopBase: "80px",
     },
     space: {
       horizontalBase: "20px",
@@ -94,7 +94,6 @@ export const globalStyles = globalCss({
     width: "100%",
     isolation: "isolate",
     zIndex: 0,
-    userSelect: "none",
   },
   a: {
     textDecoration: "none",
