@@ -9,7 +9,7 @@ import { NextPageWithLayout } from "../../utils/types";
 const Conversations: NextPageWithLayout = () => {
   return (
     <ConversationsPage>
-      <Heading>Select a Conversation In The Left Panel</Heading>
+      <Heading>Select a Conversation</Heading>
     </ConversationsPage>
   );
 };

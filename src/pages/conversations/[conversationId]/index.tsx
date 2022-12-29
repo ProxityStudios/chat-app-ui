@@ -1,5 +1,5 @@
 import AppLayout from "../../../components/AppLayout";
-import ConversationContent from "../../../components/conversation/ConversationContent";
+import ConversationContent from "../../../components/conversation/content/ConversationContent";
 import { ConversationLayout } from "../../../components/conversation/ConversationLayout";
 import { NextPageWithLayout } from "../../../utils/types";
 
