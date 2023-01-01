@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import * as React from "react";
-import { UserLayoutStyle, UserView } from "../../utils/styles/user/UserLayout";
+import { UserLayoutStyle, UserView } from "../../utils/styles/components/user/UserLayout";
 
 import AppNavigation from "../AppNavigation";
 

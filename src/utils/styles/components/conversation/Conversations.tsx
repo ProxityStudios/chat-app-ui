@@ -1,4 +1,4 @@
-import { styled } from "../../../../stitches.config";
+import { styled } from "../../../../../stitches.config";
 
 export const ConversationsContainerStyle = styled("aside", {
   width: 300,
@@ -7,6 +7,7 @@ export const ConversationsContainerStyle = styled("aside", {
   borderRight: "1px $borderColor solid",
   overflow: "auto",
 });
+
 
 export const ConversationStarusContainerStyle = styled("div", {
   padding: "0 12px",
@@ -20,6 +21,14 @@ export const ConversationStarusContainerStyle = styled("div", {
   scrollbarWidth: "none",
   "&::-webkit-scrollbar": {
     display: "none",
+  },
+});
+
+export const ConversationStarusContentStyle = styled("a", {
+  transition: "150ms all ease-out",
+  border: 0,
+  "&:focus-visible": {
+    border: "1px $accent500 solid",
   },
 });
 

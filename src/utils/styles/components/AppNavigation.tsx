@@ -1,5 +1,12 @@
-import { styled } from "../../../stitches.config";
-import { Link } from "./index";
+import { styled } from "../../../../stitches.config";
+import { IconButton, Link } from "../index";
+
+export const AppNavigationLinksStyle = styled("div", {
+  gap: 3,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center"
+})
 
 export const AppNavigationContainerStyle = styled("aside", {
   width: 75,
@@ -7,9 +14,7 @@ export const AppNavigationContainerStyle = styled("aside", {
   overflow: "auto",
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "flex-start",
-  gap: 3,
+  justifyContent: "space-between",
   padding: "20px 0",
   borderRight: "1px $borderColor solid",
 });
@@ -19,9 +24,13 @@ export const AppNavigationLinkStyle = styled(Link, {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  padding: 10,
+  width: 55,
+  height: 55,
   borderRadius: "$xlarge",
   transition: "110ms background ease-out",
+  "&:hover": {
+    background: "#222",
+  },
   variants: {
     active: {
       true: {
@@ -38,11 +47,6 @@ export const AppNavigationLinkStyle = styled(Link, {
           background: "$accent300",
           width: 4,
           height: "45%",
-        },
-      },
-      false: {
-        "&:hover": {
-          background: "#222",
         },
       },
     },

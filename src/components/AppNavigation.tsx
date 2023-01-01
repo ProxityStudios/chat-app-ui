@@ -3,40 +3,42 @@ import { useRouter } from "next/router";
 import { BsCalendarDate, BsPeople } from "react-icons/bs";
 import { MdOutlineSpaceDashboard, MdSettingsSuggest } from "react-icons/md";
 import { VscFiles } from "react-icons/vsc";
-import { AppNavigationLinkStyle, AppNavigationContainerStyle } from "../utils/styles/AppNavigation";
+import { AppNavigationContainerStyle, AppNavigationLinksStyle } from "../utils/styles/components/AppNavigation";
+import { FiLogOut } from "react-icons/fi"
+import IconLink from "../utils/styles/links/IconLink";
+import IconButton from "../utils/styles/links/IconButton";
+import { useAuth } from "../contexts/AuthContext";
 
-export interface AppNavigationProps {}
+export interface AppNavigationProps { }
+
+const navigationLinks = [
+  { href: "/conversations", icon: <MdOutlineSpaceDashboard /> },
+  { href: "/user/friends", icon: <BsPeople /> },
+  { href: "/user/files", icon: <VscFiles /> },
+  { href: "/user/calendar", icon: <BsCalendarDate /> },
+  { href: "/user/settings", icon: <MdSettingsSuggest /> }
+];
 
 export function AppNavigation(props: AppNavigationProps) {
   const router = useRouter();
+  const { logout } = useAuth();
 
   return (
     <AppNavigationContainerStyle>
-      <Link href={`/conversations`} passHref>
-        <AppNavigationLinkStyle active={router.pathname.startsWith("/conversations")}>
-          <MdOutlineSpaceDashboard size={28} />
-        </AppNavigationLinkStyle>
-      </Link>
-      <Link href={`/user/friends`} passHref>
-        <AppNavigationLinkStyle active={router.pathname.startsWith("/user/friends")}>
-          <BsPeople size={28} />
-        </AppNavigationLinkStyle>
-      </Link>
-      <Link href={`/user/files`} passHref>
-        <AppNavigationLinkStyle active={router.pathname.startsWith("/user/files")}>
-          <VscFiles size={28} />
-        </AppNavigationLinkStyle>
-      </Link>
-      <Link href={`/user/calendar`} passHref>
-        <AppNavigationLinkStyle active={router.pathname.startsWith("/user/calendar")}>
-          <BsCalendarDate size={28} />
-        </AppNavigationLinkStyle>
-      </Link>
-      <Link href={`/user/settings`} passHref>
-        <AppNavigationLinkStyle active={router.pathname.startsWith("/user/settings")}>
-          <MdSettingsSuggest size={28} />
-        </AppNavigationLinkStyle>
-      </Link>
+      <AppNavigationLinksStyle>
+        {navigationLinks.map((link, key) => (
+          <Link key={key} href={link.href} passHref>
+            <IconLink square active={router.pathname.startsWith(link.href)}>
+              {link.icon}
+            </IconLink>
+          </Link>
+        ))}
+      </AppNavigationLinksStyle>
+
+      <IconButton onClick={logout} style={{ margin: "10px auto 0 auto"}}>
+        <FiLogOut />
+      </IconButton>
+
     </AppNavigationContainerStyle>
   );
 }

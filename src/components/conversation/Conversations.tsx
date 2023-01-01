@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { BsPlusCircleDotted } from "react-icons/bs";
 import { __conversations__ } from "../../../__mocks__/conversations";
-import { IconButton } from "../../utils/styles";
+import { IconButton } from "../../utils/styles/links/IconButton";
 import {
   ConversationStyle,
   ConversationContent,
@@ -16,7 +16,8 @@ import {
   ConversationStarusContainerStyle,
   ConversationUnreadedMessagesCount,
   ConversationContentStyle,
-} from "../../utils/styles/conversation/Conversations";
+  ConversationStarusContentStyle,
+} from "../../utils/styles/components/conversation/Conversations";
 import Avatar from "../Avatar";
 
 export interface ConversationsProps {}
@@ -27,9 +28,10 @@ export function Conversations(props: ConversationsProps) {
   return (
     <ConversationsContainerStyle>
       <ConversationStarusContainerStyle>
-        <IconButton>
-          <BsPlusCircleDotted size={45} />
+        <IconButton size="md" circle>
+          <BsPlusCircleDotted  style={{ width: "45px !important", height: "45px !important"}}/>
         </IconButton>
+
         {__conversations__
           .filter((conversation) => conversation.isStared)
           .map((conversation) => (
@@ -38,9 +40,9 @@ export function Conversations(props: ConversationsProps) {
               href={`/conversations/${conversation.id}`}
               passHref
             >
-              <a>
-              <Avatar size={45} src={conversation.creator.avatarUrl} />
-              </a>
+           <ConversationStarusContentStyle>
+           <Avatar size={45} src={conversation.creator.avatarUrl} />
+           </ConversationStarusContentStyle>
             </Link>
           ))}
       </ConversationStarusContainerStyle>

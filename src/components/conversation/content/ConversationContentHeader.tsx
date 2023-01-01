@@ -3,7 +3,7 @@ import { BsTelephone } from "react-icons/bs";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { RiUserSettingsLine } from "react-icons/ri";
 import { useConversation } from "../../../contexts/ConversationContext";
-import { ConversationContentHeaderAuthorAction, ConversationContentHeaderAuthorActionsStyle, ConversationContentHeaderAuthorContainerStyle, ConversationContentHeaderAuthorEmailStyle, ConversationContentHeaderAuthorHeadingStyle, ConversationContentHeaderAuthorStyle, ConversationContentHeaderContainerStyle } from "../../../utils/styles/conversation/message/ConversationContentHeader";
+import { ConversationContentHeaderAuthorAction, ConversationContentHeaderAuthorActionsStyle, ConversationContentHeaderAuthorContainerStyle, ConversationContentHeaderAuthorEmailStyle, ConversationContentHeaderAuthorHeadingStyle, ConversationContentHeaderAuthorStyle, ConversationContentHeaderContainerStyle } from "../../../utils/styles/components/conversation/message/ConversationContentHeader";
 import Avatar from "../../Avatar";
 
 export interface ConversationContentHeaderProps { }

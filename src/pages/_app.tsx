@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { globalStyles } from "../../stitches.config";
 import { AuthProvider } from "../contexts/AuthContext";
 import { ConversationProvider } from "../contexts/ConversationContext";
@@ -15,6 +16,10 @@ function ChatApp({ Component, pageProps }: AppPropsWithLayout) {
   return (
     <AuthProvider>
       <ConversationProvider>
+        <Head>
+          <title>Chat Application</title>
+        </Head>
+
         {getLayout(<Component {...pageProps} />)}
       </ConversationProvider>
     </AuthProvider>

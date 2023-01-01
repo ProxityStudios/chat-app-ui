@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { styled } from "../../../stitches.config";
+import { styled } from "../../../../stitches.config";
 
 export const AvatarContainerStyle = styled("div", {
   display: "flex",
@@ -13,4 +13,6 @@ export const AvatarContainerStyle = styled("div", {
   height: "max-content",
   width: "max-content",
 });
-export const AvatarStyle = styled(Image, {});
+export const AvatarStyle = styled(Image, {
+    borderRadius: "100%",
+});

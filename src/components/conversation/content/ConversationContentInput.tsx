@@ -1,6 +1,6 @@
 import {
   ConversationContentInputContainerStyle, ConversationContentInputStyle
-} from "../../../utils/styles/conversation/message/ConversationInput";
+} from "../../../utils/styles/components/conversation/message/ConversationInput";
 
 export interface ConversationInputProps { }
 
