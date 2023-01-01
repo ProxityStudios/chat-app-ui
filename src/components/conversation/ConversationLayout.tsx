@@ -2,7 +2,7 @@ import * as React from "react";
 import { __conversations__ } from "../../../__mocks__/conversations";
 import {
   ConversationLayoutContainerStyle, ConversationLayoutContentStyle
-} from "../../utils/styles/conversation/ConversationLayout";
+} from "../../utils/styles/components/conversation/ConversationLayout";
 import Conversations from "./Conversations";
 
 export interface ConversationLayoutProps {

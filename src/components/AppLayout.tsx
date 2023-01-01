@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { AppLayoutContainerStyle, AppLayoutContentStyle } from "../utils/styles/AppLayout";
+import { AppLayoutContainerStyle, AppLayoutContentStyle } from "../utils/styles/components/AppLayout";
 import AppNavigation from "./AppNavigation";
 
 

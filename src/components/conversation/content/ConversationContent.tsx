@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import {
   ConversationContentContainerStyle, ConversationContentStyle
-} from "../../../utils/styles/conversation/ConversationContent";
+} from "../../../utils/styles/components/conversation/ConversationContent";
 import ConversationContentHeaderStyle from "./ConversationContentHeader";
 import ConversationInput from "./ConversationContentInput";
 

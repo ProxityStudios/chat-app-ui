@@ -28,6 +28,7 @@ export const BaseButton = styled("button", {
   },
 });
 export const IconButton = styled(BaseButton, {
+  flexShrink: 0,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -39,6 +40,34 @@ export const IconButton = styled(BaseButton, {
   "&:focus": {
     outline: "1px white solid",
   },
+  variants: {
+    size: {
+      sm: {
+        width: 45,
+        height: 45,
+        "& > svg": {
+          width: 24,
+          height: 24,
+        }
+      },
+      md: {
+        width: 55,
+        height: 55,
+        "& > svg": {
+          width: 28,
+          height: 28,
+        }
+      }
+    },
+    square: {
+      true: {
+        borderRadius: "$xlarge",
+      },
+    }
+  },
+  defaultVariants: {
+    size: "md"
+  }
 });
 
 export const Button = styled(BaseButton, {

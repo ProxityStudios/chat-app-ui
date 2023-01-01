@@ -1,4 +1,4 @@
-import { styled } from "../../../../stitches.config";
+import { styled } from "../../../../../stitches.config";
 
 export const ConversationContentContainerStyle = styled("div", {
   width: "100%",
